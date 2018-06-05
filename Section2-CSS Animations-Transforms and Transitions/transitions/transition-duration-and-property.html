@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Transition Demo</title>
+    <style>
+        .box {
+                background: #9b59b6;
+                height: 100px;
+                width: 100px;
+                line-height:100px;
+                text-align: center;
+                color: white;
+                font-size: 17px;
+                border-radius: 20px;
+            }
+            .animated {
+                transition-property: background-color, border-radius,transform;
+                transition-duration: 5s, 1s,2s;
+            }
+            .box:hover {
+                background: #e74c3c;
+                transform-origin: top left;
+                transform: scale(2);
+                border-radius: 50px;
+            }
+    </style>
+</head>
+<body>
+    <p class="box">BORING</p>
+    <p class="animated box">ANIMATED</p>        
+</body>
+</html>

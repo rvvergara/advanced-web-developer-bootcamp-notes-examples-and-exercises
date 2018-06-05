@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Transition Timing Function and Delay</title>
+    <style>
+        .box {
+                background: #9b59b6;
+                height: 100px;
+                width: 100px;
+                line-height:100px;
+                text-align: center;
+                color: white;
+                font-size: 17px;
+                border-radius: 20px;
+            }
+            .animated {
+                transition: transform 2s ease-out 1s, 
+                            background 0.5s linear;
+            }
+            .box:hover {
+                transform: translateX(300px);
+                background: teal;
+            }
+    </style>
+</head>
+<body>
+    <p class="box">BORING</p>
+    <p class="animated box">ANIMATED</p>        
+</body>
+</html>

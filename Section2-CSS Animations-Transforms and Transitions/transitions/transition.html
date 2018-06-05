@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Transition Demo</title>
+    <style>
+        .box {
+                background: #9b59b6;
+                height: 200px;
+                width: 200px;
+                line-height:200px;
+                text-align: center;
+                color: white;
+                font-size: 20px;
+        }
+        .box:hover {
+            background: #e74c3c;
+        }
+        .animated.box{
+            transition-property: background;
+            transition-duration: 1s;
+            transition-timing-function: linear;
+        }
+        .crazy.box:hover{
+            border-radius: 100%;
+            transform: rotate(2turn) scale(0.5);
+            background: #e67e22;
+        }
+        .crazy.box{
+            transition: transform 3s 1s, background 1s 1s;
+        }
+    </style>
+</head>
+<body>
+    <p class="box">NO TRANSITION</p>
+    <p class="animated box">TRANSITION</p>
+    <p class="crazy box">CRAZINESS</p>
+</body>
+</html>

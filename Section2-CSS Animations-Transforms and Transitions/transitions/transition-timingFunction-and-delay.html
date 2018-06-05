@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Transition Timing Function and Delay</title>
+    <style>
+        .box {
+                background: #9b59b6;
+                height: 100px;
+                width: 100px;
+                line-height:100px;
+                text-align: center;
+                color: white;
+                font-size: 17px;
+                border-radius: 20px;
+            }
+            /* .animated {
+                transition-property: background-color, border-radius;
+                transition-duration: 1s, 1s;
+                transition-delay: 5s,2s;
+            }
+            .box:hover {
+                background: #e74c3c;
+                transform-origin: top left;
+                transform: scale(2);
+                border-radius: 50px;
+            } */
+            .animated {
+                transition-property: transform;
+                transition-duration: 2s;
+                transition-timing-function: cubic-bezier(0.425, 0.245, 0.800, 1.350);
+            }
+            .box:hover {
+                transform: translateX(300px);
+            }
+    </style>
+</head>
+<body>
+    <p class="box">BORING</p>
+    <p class="animated box">ANIMATED</p>        
+</body>
+</html>
