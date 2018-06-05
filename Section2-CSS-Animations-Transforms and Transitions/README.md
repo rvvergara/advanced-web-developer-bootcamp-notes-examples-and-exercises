@@ -1,31 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Animated Gallery</title>
-    <link rel="stylesheet" href="./transitions/css/animated-gallery.css">
-</head>
-<body>
-    <h1>An Image Gallery</h1>
-    <div class="container">
-        <div class="item red">
-            <img src="https://preview.ibb.co/gQbzQ5/colt_steele_firemarshall.jpg"/>
-            <i class="fa fa-camera"></i>
-        </div>
-
-        <div class="item blue">
-            <img src="http:i.imgur.com/AhCfhrF.jpg"/>
-            <i class="fa fa-paw"></i>
-        </div>
-
-        <div class="item green">
-            <img src="http://preview.ibb.co/kd9Esk/colt_steele_smugglerscave.jpg"/>
-            <i class="fa fa-cloud"></i>
-        </div>
-        
-    </div>
-        
-</body>
-</html>
+<h1>Animated Image Gallery</h1>
+<p>This exercise combines CSS Transforms and Transitions</p>
+<p><a href="https://codepen.io/rvvergara/full/gKrBNN/">Codepen link for the Animated Image Gallery Exercise</a></p>
