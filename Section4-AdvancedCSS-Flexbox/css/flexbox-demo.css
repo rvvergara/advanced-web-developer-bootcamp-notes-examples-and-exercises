@@ -10,13 +10,12 @@
   font-family: lato;
   font-weight: 300;
   box-sizing: border-box;
-  width: 100px;
 }
 
-.box-1 {background: #e51400; }
+.box-1 {background: #e51400;}
 .box-2 {background: #fa6800;}
-.box-3 {background: #f0a30a; }
-.box-4 {background: #e3c800; }
+.box-3 {background: #f0a30a;}
+.box-4 {background: #e3c800;}
 .box-5 {background: #a4c400;}
 .box-6 {background: #60a917;}
 .box-7 {background: #00aba9;}
@@ -27,9 +26,7 @@
 
 .container {
   display: flex;
-  border: 20px solid black;
-  flex-direction: column-reverse;
-  justify-content: space-between;
-  height: 500px;
-  flex-wrap: wrap-reverse;
-}
+  border: 10px solid black;
+  flex-direction: row;
+  height: 90vh;
+  }
