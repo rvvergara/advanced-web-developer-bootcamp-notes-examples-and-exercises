@@ -40,3 +40,7 @@
 <h3>Polygon.com Widget</h3>
 <p>Exercise utilizes flex property of items</p>
 <p><a href="https://codepen.io/rvvergara/full/yEJjZZ/">Codepen link</a></p>
+
+<h3>Holy Grail Layout</h3>
+<p>Web design layout that's fully responsive fully solvable only by flexbox. In this exercise I deviated from Colt's solution only by reversing the principle - I made the design mobile first (Colt's solution was laptop first then adjust to mobile at the break point)</p>
+<p><a href="https://codepen.io/rvvergara/full/jKMyMb/">Codepen Link</a></p>
