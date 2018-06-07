@@ -1,0 +1,148 @@
+/* General styles */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html{
+    font: normal 16px sans-serif;
+    color: #555;
+}
+
+/* General styles */
+nav>li{
+    list-style:none;
+}
+
+nav>li>a{
+    text-shadow: 0.5px 0.5px #eeeeee;
+}
+
+a{
+    text-decoration: none;
+    opacity: 0.85;
+    color:#fff;
+}
+
+a:hover{
+    opacity: 1;
+}
+
+a.btn{
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: 800;
+    text-align: center;
+    padding: 15px 40px;
+    background: #2196F3;
+    opacity: 1;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:80px 30px;
+}
+
+/* Header Styles */
+header{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 50px;
+    font-family: Quicksand, sans-serif;
+    color:#fff;
+}
+
+header>h2{
+    margin-bottom: 15px;
+    text-align: center;
+}
+nav{
+    display: flex;
+    justify-content: center;
+}
+nav>li{
+    margin: 0 15px;
+}
+
+nav>li:first-child{
+    margin-left:0;
+}
+
+nav>li:last-child{
+    margin-right:0;
+}
+
+header>h2>a,nav>li>a{
+    color: white;
+}
+
+/* Hero styles */
+.hero{
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+    color:#fff;
+}
+
+.hero>h1{
+    font-family: "Open sans",sans-serif;
+    font-size: 48px;
+    margin-bottom: 15px;
+    margin-top:32px;
+    text-shadow: 0.5px 0.5px #aabbcc;
+}
+
+.hero>.bg-image{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    background-size: cover;
+    z-index: -1;
+    background-color: #80a3db;
+}
+
+section.hero>h3{
+    font-family: "Open sans",sans-serif;
+    font-size: 24px;
+    margin-bottom: 40px;
+
+}
+
+/* Media Queries */
+@media all and (min-width:701px){
+    header{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header>h2{
+        margin:0;
+    }
+}
+
+@media all and (min-width:1001px){
+    header{
+        padding:35px 100px 0 100px;
+    }
+    .hero{
+        padding: 125px 100px;
+    }
+    .hero>h1{
+        font-size: 60px;
+        margin-top:0;
+    }
+    .hero>h3{
+        font-size:28px;
+    }
+    a.btn{
+        padding: 20px 46px;
+    }
+}
