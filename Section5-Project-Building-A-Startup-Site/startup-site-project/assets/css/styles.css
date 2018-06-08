@@ -1,0 +1,369 @@
+/* General styles */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html{
+    font: normal 16px sans-serif;
+    color: #555;
+}
+
+/* General styles */
+nav,ul{
+    list-style:none;
+}
+
+a{
+    text-decoration: none;
+    opacity: 0.85;
+    color: inherit;
+    cursor: pointer;
+}
+
+a:hover{
+    opacity: 1;
+}
+
+a.btn{
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: 800;
+    text-align: center;
+    padding: 15px 40px;
+    background: #2196F3;
+    color: #fff;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:80px 30px;
+}
+
+section>h3.title {
+    margin-bottom: 35px;
+    text-align: center;
+    font-size: 32px;
+    font-family: "Open sans",sans-serif;
+    text-transform: capitalize;
+    color: #414a4f;
+    font-weight: bold;
+}
+
+section p {
+    padding: 0 20px;
+    margin-bottom: 35px;
+    line-height: 2;
+    text-align: center;
+    max-width: 800px;
+}
+
+/* Header Styles */
+header{
+    position: absolute;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 50px;
+    color:#fff;
+    z-index: 10;
+    top:0;
+    left:0;
+}
+
+header,nav{
+    display: flex;
+}
+
+header>h2{
+    margin-bottom: 15px;
+    font-family: Quicksand, sans-serif;
+}
+
+nav>li{
+    margin: 0 15px;
+}
+
+nav>li:first-child{
+    margin-left:0;
+}
+
+nav>li:last-child{
+    margin-right:0;
+}
+
+/* Hero styles */
+.hero{
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    min-height: 600px;
+    color:#fff;
+}
+
+.hero>h1{
+    font-family: "Open sans",sans-serif;
+    font-size: 48px;
+    margin-bottom: 15px;
+    text-shadow: 0.5px 0.5px #aabbcc;
+}
+
+.hero>.bg-image{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    background-size: cover;
+    z-index: -1;
+    background-color: #80a3db;
+}
+
+.hero>h3{
+    font-family: "Open sans",sans-serif;
+    font-size: 24px;
+    margin-bottom: 40px;
+    color: #eeeeee;
+    text-shadow: 0.35px 0.5px #444444;
+
+}
+
+/* Our-work styles */
+hr {
+    width: 150px;
+    height: 2px;
+    background: #2196F3;
+    border: 0;
+    margin-bottom: 80px;
+}
+
+ul.grid{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.our-work .grid li.small, .our-work .grid li.large {
+    flex-basis: 100%;
+}
+
+.our-work .grid li {
+    padding: 20px;
+    height: 350px;
+    border-radius: 3px;
+    background-clip: content-box;
+    background-size: cover;
+    background-position: center;
+    background-color: #333;
+}
+
+/* Features styles */
+.features{
+    background-color: #f7f7f7;
+}
+
+.features .grid li{
+    flex-basis: 100%;
+    padding: 0 30px;
+    margin-bottom: 65px;
+    text-align: center;
+}
+
+.features .grid li i{
+    font-size: 50px;
+    color: #2196F3;
+    margin-bottom: 25px;
+}
+
+.features .grid li h4{
+    color: #555;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.features .grid li p{
+    margin: 0;
+}
+/* Reviews styles */
+.reviews{
+    background-color: #fff;
+}
+
+.reviews .quote{
+    font-size: 20px;
+    text-align:center;
+    width: 80%;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+.reviews .author {
+    margin-bottom: 50px;
+}
+
+.reviews .author:last-child {
+    margin-bottom: 0;
+}
+
+/* Contact styles */
+.contact{
+    background-color: #f7f7f7;
+}
+
+.contact form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 800px;
+    width: 80%;
+}
+
+.contact form input{
+    flex-basis: 100%;
+    margin: 0 0 20px 0;
+    padding: 15px;
+    flex: 1;
+    font-size: 18px;
+    color: #555;
+}
+
+.contact form .btn{
+    padding: 18px 42px;
+}
+/* Footer styles */
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    background-color: #414a4f;
+    padding: 80px 15px;
+}
+
+footer ul{
+    display: flex;
+    margin-bottom: 25px;
+    font-size: 32px;
+}
+
+footer ul li{
+    margin: 0 8px;
+}
+
+footer ul li:first-child{
+    margin-left: 0;
+}
+
+footer ul li:last-child{
+    margin-right: 0;
+}
+
+footer p{
+    text-transform: uppercase;
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 10px;
+}
+
+footer p a{
+    color: #fff;
+}
+
+
+/* Media Queries */
+@media all and (min-width: 601px){
+    section{
+        padding: 100px 50px;
+    }
+    .features .grid li{
+        flex-basis: 70%;
+    }
+}
+
+@media all and (min-width:701px){
+    /* Header styles */
+    header{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header>h2{
+        margin:0;
+    }
+
+    /* Footer styles */
+    footer{
+        padding: 60px 0;
+    }
+}   
+
+@media all and (min-width:801px){
+    .hero {
+        min-height: 100vh;
+    }
+    .hero>h1 {
+        font-size: 60px;
+        font-weight: bold;
+    }
+    section.hero h3{
+        font-size: 28px;
+        text-shadow: none;
+        font-weight: normal;
+    }
+    .hero a.btn{
+        padding: 20px 46px;
+    }
+    /* Contact styles */
+    .contact form input{
+        margin-right: 30px;
+        margin-bottom: 0;
+    }
+}
+
+@media all and (min-width:1001px){
+    /* General styles */
+    section{
+        padding: 125px 100px;
+    }
+    /* Header styles */
+    header{
+        padding:35px 100px 0 100px;
+    }
+    .hero>h1{
+        font-size: 60px;
+        margin-top:0;
+    }
+    .hero>h3{
+        font-size:28px;
+    }
+    a.btn{
+        padding: 20px 46px;
+    }
+    /* Our-work styles */
+    .our-work .grid li.small{
+        flex-basis: 40%;
+    }
+    .our-work .grid li.large{
+        flex-basis: 60%;
+    }
+    /* Features styles */
+    .features .grid li{
+        flex-basis:33%;
+    }
+    /* Reviews styles */
+    .reviews .quote{
+        font-size: 22px;
+    }
+    .reviews .author{
+        font-size: 18px;
+    }
+}
