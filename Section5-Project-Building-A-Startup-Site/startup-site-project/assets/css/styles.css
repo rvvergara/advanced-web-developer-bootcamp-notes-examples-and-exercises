@@ -128,7 +128,7 @@ nav>li:last-child{
     left: 0;
     background-size: cover;
     z-index: -1;
-    background-color: #80a3db;
+    background-color: #444444;
 }
 
 .hero>h3{
@@ -146,9 +146,39 @@ nav>li:last-child{
     animation: content-slide-in 1s linear 0.35s 1 forwards;
 }
 
+.hero>.bg-image{
+    animation: changeBackground 100s ease-in 0.2s infinite alternate;
+}
+@keyframes changeBackground{
+    0%{
+        background-image: url('../img/architecture-background-buildings-218983.jpg');
+    }
+    20%{
+        background-image: url('../img/architecture-background-buildings-218983.jpg');
+    }
+    30%{
+        background-image: url('../img/alone-buildings-city-220444.jpg');
+    }
+    40%{
+        background-image:url('../img/alone-buildings-city-220444.jpg');
+    }
+    50%{
+        background-image:url('../img/architecture-buildings-city-313782.jpg');
+    }
+    60%{
+        background-image:url('../img/android-wallpaper-city-dark-248159.jpg');
+    }
+    80%{
+        background-image:url('../img/buildings-cars-city-169677.jpg');
+    }
+    100%{
+        background-image:url('../img/architecture-buildings-city-548084.jpg');
+    }
+}
+
 @keyframes content-slide-in {
     100%{
-        margin: 0;
+        margin-top: 1px;
         opacity: 1;
     }
 }
