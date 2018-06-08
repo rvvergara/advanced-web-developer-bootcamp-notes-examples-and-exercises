@@ -179,6 +179,9 @@ nav>li:last-child{
 @keyframes content-slide-in {
     100%{
         margin-top: 1px;
+@keyframes content-slide-in {
+    100%{
+        margin: 0;
         opacity: 1;
     }
 }
