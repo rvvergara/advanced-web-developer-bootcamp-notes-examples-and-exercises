@@ -6,3 +6,4 @@
 <p><a href="./Section2-CSS-Animations-Transforms and Transitions/">Section 2- CSS Animations: Transforms and Transitions</a></p>
 <p><a href="./Section3-CSS-Animations-Keyframes/">Section 3- CSS Animations: Keyframes</a></p>
 <p><a href="./Section4-AdvancedCSS-Flexbox/">Section 4- Advanced CSS: Flexbox</a></p>
+<p><a href="./Section5-Project-Building-A-Startup-Site/">Section 5- Project: Building A Startup Site</a></p>
