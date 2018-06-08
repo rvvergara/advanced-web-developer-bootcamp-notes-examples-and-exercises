@@ -73,6 +73,14 @@ header{
     z-index: 10;
     top:0;
     left:0;
+    opacity:0;
+    animation: headerAppear 0.75s ease-in 0.35s 1 forwards;
+}
+
+@keyframes headerAppear{
+    100%{
+        opacity:1;
+    }
 }
 
 header,nav{
@@ -130,6 +138,19 @@ nav>li:last-child{
     color: #eeeeee;
     text-shadow: 0.35px 0.5px #444444;
 
+}
+
+.hero>.bg-image ~ * {
+    opacity: 0;
+    margin-top: 100px;
+    animation: content-slide-in 1s linear 0.35s 1 forwards;
+}
+
+@keyframes content-slide-in {
+    100%{
+        margin: 0;
+        opacity: 1;
+    }
 }
 
 /* Our-work styles */
