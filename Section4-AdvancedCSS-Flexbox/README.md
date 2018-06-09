@@ -44,3 +44,8 @@
 <h3>Holy Grail Layout</h3>
 <p>Web design layout that's fully responsive fully solvable only by flexbox. In this exercise I deviated from Colt's solution only by reversing the principle - I made the design mobile first (Colt's solution was laptop first then adjust to mobile at the break point)</p>
 <p><a href="https://codepen.io/rvvergara/full/jKMyMb/">Codepen Link</a></p>
+<p>I also did the Holy Grail Layout combining both CSS Grid and Flexbox. In this exercise, I used CSS Grid for the Header and Flexbox for the Main content</p>
+<p><a href="https://codepen.io/rvvergara/full/LrxZMd/">Codepen Link</a></p>
+
+<p>Further I did the whole Holy Grail Layout using only CSS Grid.</p>
+<p><a href="https://codepen.io/rvvergara/full/qKRaEK/">Codepen Link</a></p>
