@@ -14,20 +14,17 @@ a {
 
 header, footer {
     background: #1abc9c;
-}
-
-header,footer,main {
-    height: 100px;
+    height: 50px;
 }
 
 main {
     min-height: 800px;
+    height: 100%;
 }
 
 article {
     background: #fff;
 }
-
 
 nav{
     background: #95a5a6;
@@ -46,50 +43,47 @@ header,footer,main > * {
 /* CSS GRID STYLES */
 header{
     display: grid;
-    grid-template: 1fr 1fr 1fr/1fr 1fr 1fr;
-    grid-template-areas: 
-    ". . ."
-    "a-left . a-right"
-    ". . . "
+    grid-template-columns: repeat(3,1fr);
+    justify-content: space-between;
+    align-content: center;
+    grid-template-areas: "left . right";
 }
 
-header>a:first-child{
-    grid-area: a-left;
+header a:nth-child(1){
+    grid-area: left;
 }
-
-header>a:last-child{
-    grid-area: a-right;
+header a:nth-child(2){
+    grid-area: right;
     text-align: right;
 }
 
 main {
     display: grid;
-    grid-template: 1fr/ 20% 60% 20%;
+    grid-template-rows: 60% 20% 20%;
     grid-template-areas: 
-    "n a s"
-}
-
-nav{
-    grid-area: n;
+    "article"
+    "nav"
+    "aside";
 }
 
 article{
-    grid-area: a;
+    grid-area: article;
 }
 
-aside {
-    grid-area: s;
+nav{
+    grid-area: nav;
 }
 
-@media all and (max-width:640px){
+aside{
+   grid-area: aside; 
+}
+
+@media all and (min-width:641px){
     header,footer{
-        height: 50px;
+        height: 100px;
     }
     main{
-        grid-template: 60% 20% 20%/1fr;
-        grid-template-areas:
-        "a"
-        "n"
-        "s"
+        grid-template:100%/ 20% 60% 20%;
+        grid-template-areas: "nav article aside";
     }
 }

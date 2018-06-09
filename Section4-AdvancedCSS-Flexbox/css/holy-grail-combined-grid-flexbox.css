@@ -1,55 +1,4 @@
-.container{
-    display: grid;
-    height: 100%;
-    grid-template-columns: 2fr 3fr 2fr;
-    grid-template-areas: 
-    "h h h h h h h"
-    "m m m m m m m"
-    "f f f f f f f";
-}
-
-header {
-    grid-area: h;
-    display: flex;
-    justify-content: space-between;
-}
-
-main{
-    grid-area: m;
-    display: flex;
-    justify-content: space-between;
-    min-height: 800px;
-}
-
-nav{
-    order: -1;
-    background: #95a5a6;
-}
-
-aside{
-    background: #3498db;
-}
-
-article {
-    flex: 4 0 60%;
-    margin: 4px 4px;
-    background: #fff;
-}
-
-nav, aside {
-    flex: 1 1 20%;
-}
-
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-footer{
-    grid-area: f;
-}
-
+/* General styles */
 html, body {
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
@@ -65,10 +14,24 @@ a {
 
 header, footer {
     background: #1abc9c;
+    height: 50px;
 }
 
-header,footer,main {
-    height: 100px;
+main {
+    min-height: 800px;
+    height: 100%;
+}
+
+article {
+    background: #fff;
+}
+
+nav{
+    background: #95a5a6;
+}
+
+aside{
+    background: #3498db;
 }
 
 header,footer,main > * {
@@ -77,16 +40,45 @@ header,footer,main > * {
     margin: 4px;
 }
 
-@media all and (max-width: 640px){
-    header,footer{
-        height: 50px;
-    }
-    
-    main{
-        flex-direction: column;
-    }
+/* CSS Grid Styles */
+header{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: space-between;
+    align-content: center;
+    grid-template-areas: "left . right";
+}
 
-    article {
-        order: -2;
+header a:nth-child(1){
+    grid-area: left;
+}
+header a:nth-child(2){
+    grid-area: right;
+    text-align: right;
+}
+
+/* Flexbox styles */
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+article{
+    flex: 4 0 60%;
+}
+
+nav,aside{
+    flex: 1 1 20%;
+}
+
+@media all and (min-width:641px){
+    header,footer{
+        height: 100px;
+    }
+    main{
+        flex-direction: row;
+    }
+    nav{
+        order:-1;
     }
 }
