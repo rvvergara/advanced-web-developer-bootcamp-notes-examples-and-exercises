@@ -1,0 +1,25 @@
+span {
+    color: green;
+  }
+
+  .animate{
+    opacity: 0;
+    animation: price-change 2s linear 0.15s 1 forwards;
+}
+
+@keyframes price-change {
+    0%{
+        opacity: 0;
+        transform: scale(1.2);
+    }
+    50%{
+        opacity: 0;
+    }
+    90%{
+        opacity: 0.3;
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
