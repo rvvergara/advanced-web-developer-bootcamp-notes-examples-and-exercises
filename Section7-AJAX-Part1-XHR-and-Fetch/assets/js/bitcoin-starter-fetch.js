@@ -25,16 +25,8 @@ function selectCurrency(arr){
 
 function updatePrice(){
     fetchPrice()
-    .then(function(res){
-        currentPrice = res[selectCurrency(currencies)[0]].rate;
-        return Promise.resolve(currentPrice.slice(0,currentPrice.length-2));
-    })
-    .then(function(currentPrice){
-        price.classList.add("animate");
-        currentPrice = selectCurrency(currencies)[1]+" "+currentPrice;
-        price.textContent = currentPrice;
-        title.textContent = currentPrice+" - Bitcoin Price Exercise | AJAX"
-    });
+    .then(formatPrice)
+    .then(updateDisplay);
     price.classList.remove("animate");
 }
 
@@ -46,6 +38,18 @@ function fetchPrice(){
      .then(function(res){
          return Promise.resolve(res.bpi);
      });
+}
+
+function formatPrice(res){
+    currentPrice = res[selectCurrency(currencies)[0]].rate;
+    return Promise.resolve(currentPrice.slice(0,currentPrice.length-2));
+}
+
+function updateDisplay(currentPrice){
+    price.classList.add("animate");
+    currentPrice = selectCurrency(currencies)[1]+" "+currentPrice;
+    price.textContent = currentPrice;
+    title.textContent = currentPrice+" - Bitcoin Price Exercise | AJAX"
 }
 
 setInterval(updatePrice,30000);
