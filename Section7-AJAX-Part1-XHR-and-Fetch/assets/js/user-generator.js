@@ -17,7 +17,7 @@ function generateUser(){
 }
 
 function handleError(response){
-    if(!response) throw Error(response.status);
+    if(!response.ok) throw Error(response.status);
     return response;
 }
 
