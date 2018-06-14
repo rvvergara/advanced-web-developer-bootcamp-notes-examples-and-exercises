@@ -28,6 +28,7 @@ function updatePrice(data){
             unit     = currencySyms[currency],
             amount   = data.bpi[currency].rate;
         $(this).text(unit+" "+amount.slice(0,amount.length-2)).fadeIn();
+        $("title").text(unit + " "+amount.slice(0,amount.length-2)+"- Bitcoin Price Check | jQuery Version") 
     }
 }
 
