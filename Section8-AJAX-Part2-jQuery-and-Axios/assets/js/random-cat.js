@@ -5,6 +5,7 @@ $("#btn").on("click",function(){
     .fail(function(err){
         console.log(err);
     })
+    .fail(handleError);
 });
 
 function changeCat(data){
@@ -12,4 +13,8 @@ function changeCat(data){
         $(this)[0].src = data.file;
     });
     $("#catImg").fadeIn(1000)
+}
+
+function handleError(err){
+    alert("That's not pawwsible!");
 }
