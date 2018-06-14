@@ -1,4 +1,3 @@
-
 let url         =   "https://randomuser.me/api/",
     btn         =   document.querySelector("#btn"),
     avatar      =   document.querySelector("#avatar"),
@@ -23,13 +22,14 @@ function handleError(response){
 }
 
 function parseResponse(response){
-    // parse json
-    return response.json();
+    return response.json()
+    .then(function(parsedData){
+        return parsedData.results[0];
+    });
 }
 
-function newUSer(response){
+function newUSer(data){
     toggleAnimation();
-    let data = response.results[0];
     avatar.src  =   data.picture.medium;
     fullname.textContent = data.name.first+" "+data.name.last;
     username.textContent = data.login.username;
@@ -42,7 +42,6 @@ function removeAnimation(){
 }
 
 function printError(err){
-    // print error
     alert(err);
 }
 
