@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fetch Demo</title>
+</head>
+<body>
+    <button>Click Me</button>
+    <script>
+        let url = "https://api.github.com/users/rvvergara",
+            btn = document.querySelector("button");
+        
+        btn.addEventListener("click",function(){
+            fetch(url)
+            .then(handleError)
+            .then(function(res){
+                console.log(res.login);
+            })
+            .catch(function(err){
+                console.log(err);
+            })      
+        });  
+
+        function handleError(response){
+                if(!response.ok) throw Error(response.status);
+                return response.json();
+            }      
+    </script>
+</body>
+</html>
