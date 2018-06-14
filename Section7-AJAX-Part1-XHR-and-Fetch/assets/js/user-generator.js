@@ -22,6 +22,7 @@ function handleError(response){
 }
 
 function parseResponse(response){
+<<<<<<< HEAD
     return response.json()
     .then(function(parsedData){
         return parsedData.results[0];
@@ -30,6 +31,14 @@ function parseResponse(response){
 
 function newUSer(data){
     toggleAnimation();
+=======
+    return response.json();
+}
+
+function newUSer(jsondata){
+    toggleAnimation();
+    let data = jsondata.results[0];
+>>>>>>> 9ddab56f70cd4be7b2df327a967edefad4a72c8c
     avatar.src  =   data.picture.medium;
     fullname.textContent = data.name.first+" "+data.name.last;
     username.textContent = data.login.username;
