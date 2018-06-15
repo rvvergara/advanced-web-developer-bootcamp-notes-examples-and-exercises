@@ -8,12 +8,7 @@ let xhrBtn     =   document.querySelector("#xhr"),
 xhrBtn.addEventListener("click",xhrCallback); //XHR
 fetchBtn.addEventListener("click",fetchCallback); //fetch()
 $("#jquery").on("click",jqueryCallback); //jquery
-axiosBtn.addEventListener("click",function(){
-    axios.get(url)
-    .then(axiosParse)
-    .then(displayData)
-    .catch(handleError);
-});//axios
+axiosBtn.addEventListener("click",axiosCallback);//axios
 
 /*
 Callbacks
@@ -35,7 +30,6 @@ function xhrCallback(){
         }
     }
 }
-
 // Fetch Callback Function
 function fetchCallback(){
     fetch(url)
@@ -53,18 +47,25 @@ function jqueryCallback(){
 function parseData(data){
     return data.json();
 }
+// axios callback
+function axiosCallback(){
+    axios.get(url)
+    .then(axiosParse)
+    .then(displayData)
+    .catch(handleError);
+}
 // Function to parse axios return data
 function axiosParse(data){
     return Promise.resolve(data.data);
 }
-
 // Function to display data by fading in - except for XHR
 function displayData(data){
     $("#quote").fadeOut(function(){
-        quoteDisp.textContent = data[0];
+        $("#quote").text(data[0]);
     })
     $("#quote").fadeIn();
 }
+// Error handler
 function handleError(err){
     alert("SOMETHING WENT WRONG!!!");
 }
