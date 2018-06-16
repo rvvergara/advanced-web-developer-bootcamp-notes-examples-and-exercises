@@ -118,3 +118,20 @@
             any.withinRange(floor, ceiling);
     </code>
 </pre>
+
+<h3>Other resources related to the section</h3>
+<pre>
+    <a href="https://medium.com/@bethqiang/the-absolute-beginners-guide-to-test-driven-development-with-a-practical-example-c39e73a11631">The Absolute Beginner’s Guide to Test Driven Development, with a Practical Example</a>
+    <br>
+    <a href="https://jrsinclair.com/articles/2016/one-weird-trick-that-will-change-the-way-you-code-forever-javascript-tdd/">One weird trick that will change the way you code forever: JavaScript TDD</a>
+    <br>
+    <a href="https://code.tutsplus.com/tutorials/the-newbies-guide-to-test-driven-development--net-13835">The Newbie's Guide to Test-Driven Development</a>
+    <br>
+    <a href="http://www.peterprovost.org/blog/2012/05/02/kata-the-only-way-to-learn-tdd/">Kata - the Only Way to Learn TDD</a>
+    <br>
+    <a href="https://code.tutsplus.com/tutorials/the-newbies-guide-to-test-driven-development--net-13835">The Newbie's Guide to Test-Driven Development</a>
+    <br>
+    <a href="https://howtodoinjava.com/scripting/javascript/jasmine-javascript-unit-testing-tutorial/">Jasmine – JavaScript Unit Testing Tutorial with Examples</a>
+    <br>
+    <a href="https://code.tutsplus.com/tutorials/testing-your-javascript-with-jasmine--net-21229">Testing Your JavaScript With Jasmine</a>
+</pre>
