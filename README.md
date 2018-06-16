@@ -10,3 +10,4 @@
 <p><a href="./Section6-Async-Foundations/">Section 6- Async Foundations</a></p>
 <p><a href="./Section7-AJAX-Part1-XHR-and-Fetch/">Section 7- AJAX Part 1: XHR and Fetch</a></p>
 <p><a href="./Section8-AJAX-Part2-jQuery-and-Axios">Section 8- AJAX Part 2: jQuery and Axios</a></p>
+<p><a href="./Section9-Testing-with-Jasmine/">Section 9- Testing with Jasmine</a></p>
