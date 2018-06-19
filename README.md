@@ -12,3 +12,4 @@
 <p><a href="./Section8-AJAX-Part2-jQuery-and-Axios">Section 8- AJAX Part 2: jQuery and Axios</a></p>
 <p><a href="./Section9-Testing-with-Jasmine/">Section 9- Testing with Jasmine</a></p>
 <p><a href="./Section10-Advanced-Array-Methods/">Section 10- Advanced Array Methods</a></p>
+<p><a href="./Section11-Closures-and-the-Keyword-this/">Section 11- Closures and the Keyword <code>this</code></a></p>
