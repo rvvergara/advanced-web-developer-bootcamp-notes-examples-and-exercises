@@ -1,5 +1,8 @@
 <h1>Section 11- Closures and the Keyword <code>this</code></h1>
+<<<<<<< HEAD
 <p><a href="http://webdev.slides.com/eschoppik/closures-and-the-keyword-this#/">Section Slides</a></p>
+=======
+>>>>>>> 94baccacf178e9d7d0ea65e056cbe55a4488e6a8
 <h2><code>this</code> Keyword</h2>
 <h3>Four Rules for determining</h3>
 <ol>
