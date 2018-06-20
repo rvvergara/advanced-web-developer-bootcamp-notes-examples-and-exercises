@@ -19,7 +19,7 @@
 <ul>
     <li>creates an empty object</li>
     <li>sets <code>this</code> to be that empty object</li>
-    <li>adds the line <code>return this</> to the end of the function which follows it</li>
+    <li>adds the line <code>return this</code> to the end of the function which follows it</li>
     <li>adds a <code>__proto__</code> property to that empty object which links the prototype property of the constructor function to the empty object</li>
 </ul>
 <h3>Additional resources:</h3>
