@@ -19,10 +19,10 @@
 <ul>
     <li>creates an empty object</li>
     <li>sets <code>this</code> to be that empty object</li>
-    <li>adds the line <code>return this</code> to the end of the function which follows it</li>
+    <li>adds the line <code>return this</> to the end of the function which follows it</li>
     <li>adds a <code>__proto__</code> property to that empty object which links the prototype property of the constructor function to the empty object</li>
 </ul>
 <h3>Additional resources:</h3>
-<p><a href="https://www.youtube.com/watch?v=PMfcsYzj-9M">Definitive Guide to Object Oriented Javascript</a></p>
+<p><a href="https://www.youtube.com/watch?v=PMfcsYzj-9M">Definitive Guide to Object Oriented Javascript</a> |<a href="https://github.com/rvvergara/javascript-notes-templates-etc/tree/master/OOP%20Notes%20and%20Learnings">Notes from this Video tutorial</a></p>
 
 [![Object Oriented Javascript](https://img.youtube.com/vi/PMfcsYzj-9M/0.jpg)](https://www.youtube.com/watch?v=PMfcsYzj-9M)
