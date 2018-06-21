@@ -13,3 +13,5 @@
 <p><a href="./Section9-Testing-with-Jasmine/">Section 9- Testing with Jasmine</a></p>
 <p><a href="./Section10-Advanced-Array-Methods/">Section 10- Advanced Array Methods</a></p>
 <p><a href="./Section11-Closures-and-the-Keyword-this/">Section 11- Closures and the Keyword <code>this</code></a></p>
+<p><a href="./Section12-Object-Oriented-Programming-with-Javascript/">Section 12- Object Oriented Programming with Javascript</a></p>
+<p><a href="./Section13-Creating-JSON-APIs-With-Node-and-Mongo/">Creating JSON APIs With Node and Mongo</a>-Note (Section 14 Exercise is included here)</p>
