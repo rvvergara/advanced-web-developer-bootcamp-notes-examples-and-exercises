@@ -197,4 +197,86 @@
             <img src="./images/promise-all.JPG" alt="">
         </blockquote>
     </li>
+    <li>
+        <h4>Generators</h4>
+        <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*"><code>function*</code> MDN doc</a></p>
+        <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator">Generator MDN doc</a></p>
+        <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators">Iterators and Generators MDN doc</a></p>
+        <ul>
+            <li>A special kind of function which can pause execution and resume at any time</li>
+            <li>Created using a <code>*</code></li>
+            <li>When invoked, a generator object is returned to us with the keys of <code>value</code> and <code>done</code>.</li>
+            <li>Value is what is returned from the paused function using the <code>yield</code> keyword</li>
+            <li>Done is a boolean which returns true when the function has completed</li>
+        </ul>
+        <blockquote>
+            <img src="./images/generators-1.JPG" alt="">
+        </blockquote>
+        <blockquote>
+            <h5>Yield Multiple Values</h5>
+            <p>We can place multiple yield keywords inside of a generator function to pause multiple times!</p>
+            <img src="./images/generators-2.JPG" alt="">
+        </blockquote>
+        <h4>Async Generators</h4>
+        <p>We can use generators to pause asynchronous code!</p>
+        <blockquote>
+            <img src="./images/generators-async.JPG" alt="">
+        </blockquote>
+    </li>
+    <li>
+        <h4><code>Object.assign</code></h4>
+        <p>Create copies of objects without the same reference!</p>
+        <blockquote>
+            <img src="./images/object-assign.JPG" alt="">
+        </blockquote>
+        <blockquote>
+            <h5>Not a deep clone</h5>
+            <img src="./images/object-assign2.JPG" alt="">
+            <p>
+                If we have objects inside of the object we are copying - those still have a reference!
+            </p>
+        </blockquote>
+    </li>
+    <li>
+        <h4><code>Array.from()</code></h4>
+        <p>Convert other data types into arrays</p>
+        <blockquote>
+            <h5>How it was done in ES5</h5>
+            <img src="./images/array-from.JPG" alt="">
+        </blockquote>
+        <blockquote>
+            <h5>ES2015 way:</h5>
+            <img src="./images/array-from2.JPG" alt="">
+        </blockquote>
+    </li>
+    <li>
+        <h4><code>find</code></h4>
+        <ul>
+            <li>Invoked on arrays</li>
+            <li>Accepts a callback with value, index and array (just like forEach, map, filter, etc.)</li>
+            <li>Returns the value found or undefined if not found</li>
+        </ul>
+        <blockquote>
+            <img src="./images/find1.JPG" alt="">
+        </blockquote>
+        <h4><code>findIndex</code></h4>
+        <p>
+                Similar to find, but returns an index or -1 if the value is not found
+        </p>
+        <blockquote>
+            <img src="./images/findIndex.JPG" alt="">
+        </blockquote>
+    </li>
+    <li>
+        <h4><code>includes</code></h4>
+        <p>returns a boolean if a value is in a string - easier than using indexOf</p>
+        <img src="./images/includes.JPG" alt="">
+    </li>
+    <li>
+        <h4><code>Number.isFinite()</code></h4>
+        <p>A handy way for handling NaN being a typeof number</p>
+        <blockquote>
+            <img src="./images/number-is-finite.JPG" alt="">
+        </blockquote>
+    </li>
 </ul>
