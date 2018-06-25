@@ -16,3 +16,6 @@
 <p><a href="./Section12-Object-Oriented-Programming-with-Javascript/">Section 12- Object Oriented Programming with Javascript</a></p>
 <p><a href="./Section13-Creating-JSON-APIs-With-Node-and-Mongo/">Creating JSON APIs With Node and Mongo</a>-Note (Section 14 Exercise is included here)</p>
 <p><a href="./Section15-ES2015-Part-1/">ES2015 Part I</a></p>
+<p><a href="./Section17-ES2015-Part-2/">ES2015 Part II</a></p>
+<p><a href="./Section18-ES2016-and-ES2017/">ES2016 and ES2017</a></p>
+<p><a href="./Section19-D3-and-the-DOM/">D3 and the DOM</a></p>
