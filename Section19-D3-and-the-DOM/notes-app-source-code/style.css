@@ -1,0 +1,69 @@
+body {
+  background-color: #e4e4e4;
+}
+
+h1 {
+  text-align: center;
+}
+
+#notes,.preview {
+  margin: 0 auto 15px;
+  width: 75%;
+}
+
+.note {
+  background-color: #fdffb7;
+  border: 8px solid #d4daa7;
+}
+
+.note,.preview {
+  border-radius: 8px;
+  padding: 10px;
+  transition: all 0.2s linear;
+}
+
+.preview{
+  background-color: #31c975;
+  border:8px solid #022e14;
+  height: 18px;
+}
+
+.invisible{
+  display: none;
+}
+
+#remove {
+  background-color: red;
+}
+
+#lucky {
+  background-color: #31c975;
+}
+
+form {
+  text-align: center;
+}
+
+input {
+  width: 50%;
+}
+
+input,
+button {
+  padding: 10px;
+}
+
+button {
+  background-color: #ff9494;
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #fe2222;
+}
+
+button:focus {
+  outline: none;
+}
