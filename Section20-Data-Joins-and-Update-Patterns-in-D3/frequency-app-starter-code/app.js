@@ -1,53 +1,51 @@
 // write your code here!
-const   form    =   d3.select("form"),
-        input   =   d3.select("input"),
+const   input   =   d3.select("input"),
         reset   =   d3.select("#reset"),
         phrase  =   d3.select("#phrase"),
         count   =   d3.select("#count"),
         letters =   d3.select("#letters");
-
-let data = [];
-
-form.on("submit",()=>{
-    d3.event.preventDefault();
-    let inputText       = input.property("value").toLowerCase(),
-        newText        =  inputText.concat(data.join("")),
-        oldLength      = data.length,
-        dataSet    = new Set();
-
-    for(char of newText) dataSet.add(char);
-
-    data = Array.from(dataSet).sort();
     
-    count.text(`(New characters: ${data.length - oldLength})`)
+let upData = [];
+
+d3.select("form").on("submit",()=>{
+    d3.event.preventDefault();
+    
+    let inputText       = input.property("value").toLowerCase(),
+        enterData       = new Set(),
+        dataObj         = freqObj(inputText,enterData),
+        newData         = inputText.split(""),
+        newCharCount    =   0;
+        
+    enterData = Array.from(enterData).sort();
 
     let updateSelect = d3.select("#letters")
-    .selectAll("div")
-      .data(data),
-      
-      enterSelect = updateSelect
-        .enter();
-    
-    console.log("updateSelect",updateSelect);
-    console.log("enterSelect",enterSelect);    
-   
-    d3.selectAll(".letter").remove();
-    
+                          .selectAll("div")
+                          .data(enterData,d=>{
+                            //   if(!upData.includes(d)) return d;
+                            return d.character;
+                          });
     updateSelect
-        .classed("new",d=>!data.includes(d));
-        
-    enterSelect
+        .classed("new",false)
+        .exit()
+        .remove();
+
+    updateSelect
+        .enter()                      
         .append("div")
         .text(d=>d)
-        .style("height",d=>{
-            let occ = [...inputText].filter(l=>l===d).length;
-            return `${occ*20}px`
-        })
+        .classed("letter",true)
+        .merge(updateSelect)
         .style("width","20px")
+        .style("height",d=>`${dataObj[0][d]*20}px`)
+        .style("line-height","20px")
         .style("margin-right","5px")
-        .classed("letter new",true)
+        .classed("new",d=>!upData.includes(d));
 
-        input.property("value","");
+    phrase.text(`Analysis of: ${inputText}`);
+    count.text(`(New characters: ${dataObj[1]})`);
+    
+    upData = enterData;
+    input.property("value","");
 });
 
 reset.on("click",()=>{
@@ -55,6 +53,19 @@ reset.on("click",()=>{
     count.text("");
     input.property("value","");
     d3.selectAll(".letter").remove();
-    data = [];
+    upData = [];
 })
 
+function freqObj(word,set,dataArr){
+    let dataObj = {},
+        newCharCount = 0;
+
+    for(let char of word){
+        dataObj[char]===undefined?dataObj[char]=1:dataObj[char]++;
+        set.add(char);
+    }
+    
+    for(let letter of set) upData.includes(letter)?newCharCount:newCharCount++;
+
+    return [dataObj,newCharCount];
+}
