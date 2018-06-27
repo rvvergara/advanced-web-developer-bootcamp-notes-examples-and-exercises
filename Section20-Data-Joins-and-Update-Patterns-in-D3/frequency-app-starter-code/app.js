@@ -6,48 +6,55 @@ const   form    =   d3.select("form"),
         count   =   d3.select("#count"),
         letters =   d3.select("#letters");
 
-let data = [];
+let upData = [];
 
 form.on("submit",()=>{
     d3.event.preventDefault();
-    let inputText       = input.property("value").toLowerCase(),
-        newText        =  inputText.concat(data.join("")),
-        oldLength      = data.length,
-        dataSet    = new Set();
-
-    for(char of newText) dataSet.add(char);
-
-    data = Array.from(dataSet).sort();
     
-    count.text(`(New characters: ${data.length - oldLength})`)
+    let inputText       = input.property("value").toLowerCase(),
+        dataObj         = {},
+        newData         = inputText.split(""),
+        newCharCount    =   0,
+        enterData       = new Set();
+
+    d3.select("#letters")
+      .selectAll("div")
+         .remove();
+    
+    for(let char of inputText){
+        dataObj[char]===undefined?dataObj[char]=1:dataObj[char]++;
+        enterData.add(char);
+    }
+
+    enterData = Array.from(enterData).sort();
+
+    for(let letter of enterData) upData.includes(letter)?newCharCount:newCharCount++;
+
+    phrase.text(`Analysis of: ${inputText}`);
+    count.text(`(New characters: ${newCharCount})`);
 
     let updateSelect = d3.select("#letters")
-    .selectAll("div")
-      .data(data),
-      
-      enterSelect = updateSelect
-        .enter();
-    
-    console.log("updateSelect",updateSelect);
-    console.log("enterSelect",enterSelect);    
-   
-    d3.selectAll(".letter").remove();
+                          .selectAll("div")
+                          .data(enterData,d=>{
+                              if(!upData.includes(d)) return d;
+                          }),
+    enterSelect     = updateSelect.enter();
     
     updateSelect
-        .classed("new",d=>!data.includes(d));
-        
+        .classed("new",false);
+
     enterSelect
         .append("div")
         .text(d=>d)
-        .style("height",d=>{
-            let occ = [...inputText].filter(l=>l===d).length;
-            return `${occ*20}px`
-        })
+        .classed("letter",true)
         .style("width","20px")
+        .style("height",d=>`${dataObj[d]*20}px`)
+        .style("line-height","20px")
         .style("margin-right","5px")
-        .classed("letter new",true)
+        .classed("new",d=>!upData.includes(d))
 
-        input.property("value","");
+    upData = enterData;
+    input.property("value","");
 });
 
 reset.on("click",()=>{
@@ -55,6 +62,6 @@ reset.on("click",()=>{
     count.text("");
     input.property("value","");
     d3.selectAll(".letter").remove();
-    data = [];
+    upData = [];
 })
 
