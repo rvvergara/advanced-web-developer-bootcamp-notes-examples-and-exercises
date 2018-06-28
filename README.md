@@ -19,3 +19,4 @@
 <p><a href="./Section17-ES2015-Part-2/">ES2015 Part II</a></p>
 <p><a href="./Section18-ES2016-and-ES2017/">ES2016 and ES2017</a></p>
 <p><a href="./Section19-D3-and-the-DOM/">D3 and the DOM</a></p>
+<p><a href="./Section20-Data-Joins-and-Update-Patterns-in-D3/">Data Joins and Update Patterns in D3</a></p>
