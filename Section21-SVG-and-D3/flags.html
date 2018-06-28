@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Paths- SVG and D3</title>
+    <link rel="stylesheet" href="./assets/css/svg.css">
+</head>
+<body>
+    <svg version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg">
+        <g id="bahamas">
+            <path d="M20 20 
+                     h 380
+                     v 200
+                     h -380
+                     z"
+                 fill="#00ABC9" stroke="" stroke-width="" />
+            <rect x="20" y="87.5" width="380" height="65" fill="#FAE042"/>
+            <path d="M20 20
+                     l 150 100
+                     l -150 100"
+                 fill="" stroke="" stroke-width="" />
+            <text x="100"  y="250" font-family="Arial,sans-serif" font-size="2em" font-weight="700">Bahamas</text>
+        </g>
+        <g id="japan">
+            <rect x="450" y="20" width="380" height="200" stroke-width="0.5px" stroke="gray" fill="white"/>
+            <circle cx="640" cy="120" r="60" fill="red"/>
+            <text x="580"  y="250" font-family="Arial,sans-serif" font-size="2em" font-weight="700">Japan</text>
+        </g>
+        <g id="bahrain">
+            <path d="M20 300
+                     h380
+                     v200
+                     h-380"
+                 fill="#CE1126"/>
+            <rect x="20" y="300" width="90" height="200" fill="white" stroke="gray" stroke-width="0.5px" />
+            <path d="M110 300
+                     l45 20
+                     l-45 20
+                     l-10 0
+                     z"
+                 fill="white" stroke="" stroke-width="" />
+            <path d="M110 340
+                     l45 20
+                     l-45 20
+                     l-10 0
+                     z"
+                 fill="white" stroke="" stroke-width="" />
+            <path d="M110 380
+                     l45 20
+                     l-45 20
+                     l-10 0
+                     z"
+                 fill="white" stroke="" stroke-width="" />
+            <path d="M110 420
+                     l45 20
+                     l-45 20
+                     l-10 0
+                     z"
+                 fill="white" stroke="" stroke-width="" />
+            <path d="M110 460
+                     l45 20
+                     l-45 20
+                     l-10 0
+                     z"
+                 fill="white" stroke="" stroke-width="" />
+            <text x="100"  y="540" font-family="Arial,sans-serif" font-size="2em" font-weight="700">Bahrain</text>
+        </g>
+        <g id="philippines" transform="translate(450,300)">
+            <rect x="0" y="0" width="380" height="200" fill="white" stroke="gray" stroke-width="0.5px"/>
+            <path id="phil-blue" d="M0 0
+                     l 150 100
+                     h 230
+                     v -100
+                     z"
+                 fill="#0038A8" stroke="" stroke-width="" />
+            <path id="phil-red" d="M0 200
+                     l 150 -100
+                     h 230
+                     v 100
+                     z"
+                 fill="#CE1126" stroke="" stroke-width="" />
+            <g id="philsun">
+                <circle cx="50" cy="100" r="20" fill="#FCD116"/>
+                <g class="rays" transform="rotate(0 50 100)">
+                    <path class="left-ray" d="M47 87
+                             l -2 -22
+                             l -2 3
+                             l 3 22"
+                         fill="#FCD116" stroke="" stroke-width="" />
+                    <path class="mid-ray" d="M49 85
+                             l -3 -20
+                             l 3 -2
+                             l 3 2
+                             l -2 20"
+                         fill="#FCD116" stroke="" stroke-width="" />
+                    <path class="right-ray" d="M51 87
+                             l 2 -22
+                             l 2 3
+                             l -3 22"
+                         fill="#FCD116" stroke="" stroke-width="" />
+                </g>
+                <g class="rays" transform="rotate(45 50 100)">
+                    <path class="left-ray" d="M47 87
+                             l -2 -22
+                             l -2 3
+                             l 3 22"
+                         fill="#FCD116" stroke="" stroke-width="" />
+                    <path class="mid-ray" d="M49 85
+                             l -3 -20
+                             l 3 -2
+                             l 3 2
+                             l -2 20"
+                         fill="#FCD116" stroke="" stroke-width="" />
+                    <path class="right-ray" d="M51 87
+                             l 2 -22
+                             l 2 3
+                             l -3 22"
+                         fill="#FCD116" stroke="" stroke-width="" />
+                </g>
+                <g class="rays" transform="rotate(90 50 100)">
+                    <path class="left-ray" d="M47 87
+                             l -2 -22
+                             l -2 3
+                             l 3 22"
+                         fill="#FCD116" stroke="" stroke-width="" />
+                    <path class="mid-ray" d="M49 85
+                             l -3 -20
+                             l 3 -2
+                             l 3 2
+                             l -2 20"
+                         fill="#FCD116" stroke="" stroke-width="" />
+                    <path class="right-ray" d="M51 87
+                             l 2 -22
+                             l 2 3
+                             l -3 22"
+                         fill="#FCD116" stroke="" stroke-width="" />
+                </g>
+                <g class="rays" transform="rotate(135 50 100)">
+                    <path class="left-ray" d="M47 87
+                             l -2 -22
+                             l -2 3
+                             l 3 22"
+                         fill="#FCD116" stroke="" stroke-width="" />
+                    <path class="mid-ray" d="M49 85
+                             l -3 -20
+                             l 3 -2
+                             l 3 2
+                             l -2 20"
+                         fill="#FCD116" stroke="" stroke-width="" />
+                    <path class="right-ray" d="M51 87
+                             l 2 -22
+                             l 2 3
+                             l -3 22"
+                         fill="#FCD116" stroke="" stroke-width="" />
+                </g>
+                <g class="rays" transform="rotate(180 50 100)">
+                    <path class="left-ray" d="M47 87
+                             l -2 -22
+                             l -2 3
+                             l 3 22"
+                         fill="#FCD116" stroke="" stroke-width="" />
+                    <path class="mid-ray" d="M49 85
+                             l -3 -20
+                             l 3 -2
+                             l 3 2
+                             l -2 20"
+                         fill="#FCD116" stroke="" stroke-width="" />
+                    <path class="right-ray" d="M51 87
+                             l 2 -22
+                             l 2 3
+                             l -3 22"
+                         fill="#FCD116" stroke="" stroke-width="" />
+                </g>
+                <g class="rays" transform="rotate(225 50 100)">
+                    <path class="left-ray" d="M47 87
+                             l -2 -22
+                             l -2 3
+                             l 3 22"
+                         fill="#FCD116" stroke="" stroke-width="" />
+                    <path class="mid-ray" d="M49 85
+                             l -3 -20
+                             l 3 -2
+                             l 3 2
+                             l -2 20"
+                         fill="#FCD116" stroke="" stroke-width="" />
+                    <path class="right-ray" d="M51 87
+                             l 2 -22
+                             l 2 3
+                             l -3 22"
+                         fill="#FCD116" stroke="" stroke-width="" />
+                </g>
+                <g class="rays" transform="rotate(270 50 100)">
+                    <path class="left-ray" d="M47 87
+                             l -2 -22
+                             l -2 3
+                             l 3 22"
+                         fill="#FCD116" stroke="" stroke-width="" />
+                    <path class="mid-ray" d="M49 85
+                             l -3 -20
+                             l 3 -2
+                             l 3 2
+                             l -2 20"
+                         fill="#FCD116" stroke="" stroke-width="" />
+                    <path class="right-ray" d="M51 87
+                             l 2 -22
+                             l 2 3
+                             l -3 22"
+                         fill="#FCD116" stroke="" stroke-width="" />
+                </g>
+                <g class="rays" transform="rotate(315 50 100)">
+                    <path class="left-ray" d="M47 87
+                             l -2 -22
+                             l -2 3
+                             l 3 22"
+                         fill="#FCD116" stroke="" stroke-width="" />
+                    <path class="mid-ray" d="M49 85
+                             l -3 -20
+                             l 3 -2
+                             l 3 2
+                             l -2 20"
+                         fill="#FCD116" stroke="" stroke-width="" />
+                    <path class="right-ray" d="M51 87
+                             l 2 -22
+                             l 2 3
+                             l -3 22"
+                         fill="#FCD116" stroke="" stroke-width="" />
+                </g>
+            </g>
+            <g id="phil-stars">
+                <g id="top-star" transform="translate(1,15) rotate(-30 10 10)">
+                    <polygon transform="scale(0.12)" points = "100,10 40,180 190,60 10,60 160,180" fill = "#FCD116"/>            
+                </g>
+                <g id="mid-star" transform="translate(110,87) rotate(15 5 10)">
+                    <polygon transform="scale(0.12)" points = "100,10 40,180 190,60 10,60 160,180" fill = "#FCD116"/>            
+                </g>
+                <g id="bottom-star" transform="translate(2,165) rotate(-10 5 10)">
+                    <polygon transform="scale(0.12)" points = "100,10 40,180 190,60 10,60 160,180" fill = "#FCD116"/>            
+                </g>
+            </g>
+            <text x="100"  y="240" font-family="Arial,sans-serif" font-size="2em" font-weight="700">Philippines</text>
+        </g>
+    </svg>
+</body>
+</html>

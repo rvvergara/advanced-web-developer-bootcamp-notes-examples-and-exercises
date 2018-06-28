@@ -1,0 +1,23 @@
+svg {
+    border: 1px solid black;
+    width: 860px;
+    height: 560px;
+    margin: 0 150px;
+  }
+
+.eyes{
+  opacity: 0;
+  animation: 1s text-animation linear infinite forwards; 
+}
+
+@keyframes text-animation{
+  0% {
+    opacity: 0
+  }
+  50%{
+    opacity:0.5
+  }
+  100%{
+    opacity:1
+  }
+}
