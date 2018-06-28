@@ -20,3 +20,4 @@
 <p><a href="./Section18-ES2016-and-ES2017/">ES2016 and ES2017</a></p>
 <p><a href="./Section19-D3-and-the-DOM/">D3 and the DOM</a></p>
 <p><a href="./Section20-Data-Joins-and-Update-Patterns-in-D3/">Data Joins and Update Patterns in D3</a></p>
+<p><a href="./Section21-SVG-and-D3/">SVG and D3</a></p>
