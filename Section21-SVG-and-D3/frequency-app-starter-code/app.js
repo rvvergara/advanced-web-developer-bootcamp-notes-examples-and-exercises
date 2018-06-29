@@ -1,32 +1,60 @@
 // write your code here!
+let width = 800,
+    height = 110,
+    barPadding = 10,
+    svg = d3.select("svg")
+              .attr("width",width)
+              .attr("height",height);
+
+
 d3.select("form").on("submit",()=>{
+    d3.event.preventDefault();
+
     let inputText = d3.select("input").property("value").toLowerCase(),
         enterData = Array.from(new Set(inputText.split("").sort())),
-        updateSelect = d3.select("#letters")
-                         .selectAll("div")
-                         .data(enterData,d=>d),
-        enterSelect = updateSelect.enter();
+    
+    barWidth = width/enterData.length - barPadding;
 
-    d3.event.preventDefault();
+    updateSelect = svg
+                     .selectAll(".letter")
+                       .data(enterData,d=>d);
     
     updateSelect
-      .classed("new",false)
-      .exit()
-      .remove();
+    .classed("new",false)
+    .exit()
+    .remove();
+               
+    let dataGrp     =  updateSelect
+                      .enter()
+                      .append("g")
+                      .classed("letter",true)
+                      .classed("new",true);
 
-    enterSelect
-      .append("div")
-      .classed("new",true)
-      .text(d=>d)
-    .merge(updateSelect)
-      .classed("letter",true)                   
-      .style("width","20px")
-      .style("height",d=>`${frequency(inputText)[d]*20}px`)
-      .style("line-height","20px")
-      .style("margin-right","5px");  
+    dataGrp
+      .append("rect");
 
+    dataGrp
+      .append("text");
+
+    dataGrp
+       .merge(updateSelect)
+       .select("rect")
+        .attr("x",(d,i)=>(barPadding+barWidth)*i)
+        .attr("y",d=>height-frequency(inputText)[d]*20)           
+        .attr("width",barWidth)
+        .attr("height",d=>frequency(inputText)[d]*20);       
+
+    dataGrp
+        .merge(updateSelect)
+        .select("text")
+        .text(d=>d)
+        .attr("font-size","1.5em")
+        .attr("x",(d,i)=>(barPadding+barWidth)*i+barWidth/2)
+        .attr("y",d=>height-frequency(inputText)[d]*20-10)
+        .attr("fill","black");
+    
     d3.select("#phrase").text(`Analysis of: ${inputText}`);
-    d3.select("#count").text(`(New characters: ${enterSelect.nodes().length})`)
+    d3.select("#count").text(`(New characters: ${updateSelect.enter().nodes().length})`)
     d3.select("input").property("value","");  
 });
 
