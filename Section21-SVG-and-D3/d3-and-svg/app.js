@@ -1,38 +1,52 @@
-let minYr = birthData[0].year,
-    maxYr = birthData[birthData.length-1].year,
-    numBars = 12,
-    width = 600,
-    height = 600,
-    barPadding = 10,
-    barWidth = width/numBars - barPadding;
+document.addEventListener("DOMContentLoaded",()=>{
+    let     minYr   =   d3.min(birthData,d=>d.year),
+            maxYr   =   d3.max(birthData,d=>d.year),
+            maxBirths   =   d3.max(birthData,d=>d.births),
+            width   =   800,
+            height  =   600,
+            barPadding  = 10,
+            barWidth    =   width/12 - barPadding,
+            yScale      =   d3.scaleLinear().domain([maxBirths,0]).range([0,height]),
 
-d3.select("input")
-.property("min",minYr)
-.property("max",maxYr)
-.property("value",minYr);
+            svg         =   d3.select("svg")
+                                .attr("width",width)
+                                .attr("height",height)
+                                .style("border","1px solid black"),
 
-d3.select("svg")
-    .attr("width",width)
-    .attr("height",height)
-   .selectAll("rect")
-   .data(birthData.filter(d =>d.year===minYr)) 
-    .enter()
-    .append("rect")
-    .attr("width",barWidth)
-    .attr("height",d=>d.births/2.5e6*height)
-    .attr("y",d=>height-d.births/2.5e6*height)
-    .attr("x",(d,i)=>{
-        return (barWidth + barPadding)*i;
-    })
-    .attr("fill","purple")
-    .attr("stroke","black")
-    .attr("stroke-width","2");
+            input       =   d3.select("input")
+                                  .attr("min",minYr)
+                                  .attr("max",maxYr)
+                                  .attr("value",minYr);   
 
-d3.select("input").on("input",()=>{
-    let yr = +d3.event.target.value;
-    d3.selectAll("rect")
-       .data(birthData.filter(d=>d.year === yr))
-       .attr("height",d=>d.births/2.5e6*height)
-       .attr("y",d=>height-d.births/2.5e6*height)
-       .attr("x",(d,i)=>(barWidth+barPadding)*i)
-})
+    buildRects(makeSelection(minYr));    
+
+    function makeSelection(yearFilter,keyFn){
+        return svg
+                .selectAll("rect")
+                .data(birthData.filter(d=>d.year===yearFilter),keyFn)          
+    }
+
+    input.on("input",()=>{
+      let yr = +d3.event.target.value;
+      let updateSelect = svg
+        .selectAll("rect")
+        .data(birthData.filter(d=>d.year===yr),d=>d.year);
+
+      buildRects(makeSelection(yr,d=>d.year)); //to match items based on year since we want data to change every change in year
+    });
+
+    function buildRects(selection){
+        selection
+        .exit()
+        .remove();
+
+        selection  
+            .enter()
+            .append("rect")
+            .attr("x",(d,i)=>(barPadding+barWidth)*i)
+            .attr("y",d=>yScale(d.births))
+            .attr("width",barWidth)
+            .attr("height",d=>height-yScale(d.births))
+            .attr("fill","purple");
+    }
+});
