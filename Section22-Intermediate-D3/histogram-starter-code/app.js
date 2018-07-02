@@ -1,42 +1,39 @@
-// we'll write this code together
 let width = 600, height = 600, barPadding = 1,
-    minYear = d3.min(birthData,d=>d.year),
-    
-    yearData = birthData.filter(d=>d.year === minYear),
-
-    xScale = d3.scaleLinear().domain([0,d3.max(yearData,d=>d.births)]).rangeRound([0,width]),
-    
-    histogram = d3.histogram()
-                  .domain(xScale.domain())
-                  .thresholds(xScale.ticks())
-                  .value(d=>d.births),
-    
-    bins    = histogram(yearData),
-
-    barWidth = width / bins.length - barPadding,
-    
+    minYr = d3.min(birthData,d=>d.year),
+    yrData = birthData.filter(d=>d.year === minYr),
+    xScale = d3.scaleLinear().domain([0,d3.max(yrData,d=>d.births)]).range([0,width]),
+    hist = d3.histogram()
+             .domain(xScale.domain())
+             .thresholds(xScale.ticks())
+             .value(d=>d.births),
+    bins = hist(yrData),
     yScale = d3.scaleLinear().domain([0,d3.max(bins,d=>d.length)]).range([height,0]),
-
-    bars = d3.select("svg")
-               .attr("width",width)
-               .attr("height",height)
-             .selectAll(".bar")
-               .data(bins)
-               .enter()
-               .append("g")
-               .classed("bar",true)
-bars
-  .append("rect")
-  .attr("x",(d,i)=>xScale(d.x0))
-  .attr("y",d=>yScale(d.length))
-  .attr("width",d=>xScale(d.x1) - xScale(d.x0) - barPadding)
-  .attr("height",d=>height-yScale(d.length))
-  .attr("fill","purple");
+    barWidth = width/bins.length - barPadding,
+    bars    = d3.select("svg")
+                 .attr("width",width)
+                 .attr("height",height)
+                 .selectAll(".bars")
+                 .data(bins)
+                 .enter()
+                 .append("g")
+                 .classed("bars",true);
     
-bars
-    .append('text')
-        .text(d=>`${d.x0} - ${d.x1} (bar height: ${d.length})`)
-        .attr("transform","rotate(-90)")
-        .attr("y",d=>(xScale(d.x1)+xScale(d.x0)/2))
-        .attr("x",-height+10)
-        .style("alignment-baseline","middle")
+    bars
+      .append("rect")
+      .attr("x",d=>xScale(d.x0))
+      .attr("y",d=>yScale(d.length))
+      .attr("width",d=>xScale(d.x1) - xScale(d.x0) - barPadding)
+      .attr("height",d=>height - yScale(d.length))
+      .attr("fill","purple")
+      .attr("stroke","yellow")
+      .attr("stroke-width","1px");
+
+    bars
+      .append("text")
+      .text(d=>`${d.x0} - ${d.x1}, bin length: ${d.length}`)
+      .attr("transform","rotate(-90)")
+      .attr("x",d=>10-height)
+      .attr("y",d=>(xScale(d.x0)+xScale(d.x1))/2)
+      .attr("alignment-baseline","middle")
+
+
