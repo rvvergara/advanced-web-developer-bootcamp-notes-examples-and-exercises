@@ -1,0 +1,1504 @@
+{
+  "geonames": [
+    {
+      "continent": "EU",
+      "population": 84000,
+      "countryCode": "AD",
+      "countryName": "Andorra"
+    },
+    {
+      "continent": "AS",
+      "population": 4975593,
+      "countryCode": "AE",
+      "countryName": "United Arab Emirates"
+    },
+    {
+      "continent": "AS",
+      "population": 29121286,
+      "countryCode": "AF",
+      "countryName": "Afghanistan"
+    },
+    {
+      "continent": "NA",
+      "population": 86754,
+      "countryCode": "AG",
+      "countryName": "Antigua and Barbuda"
+    },
+    {
+      "continent": "NA",
+      "population": 13254,
+      "countryCode": "AI",
+      "countryName": "Anguilla"
+    },
+    {
+      "continent": "EU",
+      "population": 2986952,
+      "countryCode": "AL",
+      "countryName": "Albania"
+    },
+    {
+      "continent": "AS",
+      "population": 2968000,
+      "countryCode": "AM",
+      "countryName": "Armenia"
+    },
+    {
+      "continent": "AF",
+      "population": 13068161,
+      "countryCode": "AO",
+      "countryName": "Angola"
+    },
+    {
+      "continent": "AN",
+      "population": 0,
+      "countryCode": "AQ",
+      "countryName": "Antarctica"
+    },
+    {
+      "continent": "SA",
+      "population": 41343201,
+      "countryCode": "AR",
+      "countryName": "Argentina"
+    },
+    {
+      "continent": "OC",
+      "population": 57881,
+      "countryCode": "AS",
+      "countryName": "American Samoa"
+    },
+    {
+      "continent": "EU",
+      "population": 8205000,
+      "countryCode": "AT",
+      "countryName": "Austria"
+    },
+    {
+      "continent": "OC",
+      "population": 21515754,
+      "countryCode": "AU",
+      "countryName": "Australia"
+    },
+    {
+      "continent": "NA",
+      "population": 71566,
+      "countryCode": "AW",
+      "countryName": "Aruba"
+    },
+    {
+      "continent": "EU",
+      "population": 26711,
+      "countryCode": "AX",
+      "countryName": "Åland"
+    },
+    {
+      "continent": "AS",
+      "population": 8303512,
+      "countryCode": "AZ",
+      "countryName": "Azerbaijan"
+    },
+    {
+      "continent": "EU",
+      "population": 4590000,
+      "countryCode": "BA",
+      "countryName": "Bosnia and Herzegovina"
+    },
+    {
+      "continent": "NA",
+      "population": 285653,
+      "countryCode": "BB",
+      "countryName": "Barbados"
+    },
+    {
+      "continent": "AS",
+      "population": 156118464,
+      "countryCode": "BD",
+      "countryName": "Bangladesh"
+    },
+    {
+      "continent": "EU",
+      "population": 10403000,
+      "countryCode": "BE",
+      "countryName": "Belgium"
+    },
+    {
+      "continent": "AF",
+      "population": 16241811,
+      "countryCode": "BF",
+      "countryName": "Burkina Faso"
+    },
+    {
+      "continent": "EU",
+      "population": 7148785,
+      "countryCode": "BG",
+      "countryName": "Bulgaria"
+    },
+    {
+      "continent": "AS",
+      "population": 738004,
+      "countryCode": "BH",
+      "countryName": "Bahrain"
+    },
+    {
+      "continent": "AF",
+      "population": 9863117,
+      "countryCode": "BI",
+      "countryName": "Burundi"
+    },
+    {
+      "continent": "AF",
+      "population": 9056010,
+      "countryCode": "BJ",
+      "countryName": "Benin"
+    },
+    {
+      "continent": "NA",
+      "population": 8450,
+      "countryCode": "BL",
+      "countryName": "Saint Barthélemy"
+    },
+    {
+      "continent": "NA",
+      "population": 65365,
+      "countryCode": "BM",
+      "countryName": "Bermuda"
+    },
+    {
+      "continent": "AS",
+      "population": 395027,
+      "countryCode": "BN",
+      "countryName": "Brunei"
+    },
+    {
+      "continent": "SA",
+      "population": 9947418,
+      "countryCode": "BO",
+      "countryName": "Bolivia"
+    },
+    {
+      "continent": "NA",
+      "population": 18012,
+      "countryCode": "BQ",
+      "countryName": "Bonaire"
+    },
+    {
+      "continent": "SA",
+      "population": 201103330,
+      "countryCode": "BR",
+      "countryName": "Brazil"
+    },
+    {
+      "continent": "NA",
+      "population": 301790,
+      "countryCode": "BS",
+      "countryName": "Bahamas"
+    },
+    {
+      "continent": "AS",
+      "population": 699847,
+      "countryCode": "BT",
+      "countryName": "Bhutan"
+    },
+    {
+      "continent": "AN",
+      "population": 0,
+      "countryCode": "BV",
+      "countryName": "Bouvet Island"
+    },
+    {
+      "continent": "AF",
+      "population": 2029307,
+      "countryCode": "BW",
+      "countryName": "Botswana"
+    },
+    {
+      "continent": "EU",
+      "population": 9685000,
+      "countryCode": "BY",
+      "countryName": "Belarus"
+    },
+    {
+      "continent": "NA",
+      "population": 314522,
+      "countryCode": "BZ",
+      "countryName": "Belize"
+    },
+    {
+      "continent": "NA",
+      "population": 33679000,
+      "countryCode": "CA",
+      "countryName": "Canada"
+    },
+    {
+      "continent": "AS",
+      "population": 628,
+      "countryCode": "CC",
+      "countryName": "Cocos [Keeling] Islands"
+    },
+    {
+      "continent": "AF",
+      "population": 70916439,
+      "countryCode": "CD",
+      "countryName": "Democratic Republic of the Congo"
+    },
+    {
+      "continent": "AF",
+      "population": 4844927,
+      "countryCode": "CF",
+      "countryName": "Central African Republic"
+    },
+    {
+      "continent": "AF",
+      "population": 3039126,
+      "countryCode": "CG",
+      "countryName": "Republic of the Congo"
+    },
+    {
+      "continent": "EU",
+      "population": 7581000,
+      "countryCode": "CH",
+      "countryName": "Switzerland"
+    },
+    {
+      "continent": "AF",
+      "population": 21058798,
+      "countryCode": "CI",
+      "countryName": "Ivory Coast"
+    },
+    {
+      "continent": "OC",
+      "population": 21388,
+      "countryCode": "CK",
+      "countryName": "Cook Islands"
+    },
+    {
+      "continent": "SA",
+      "population": 16746491,
+      "countryCode": "CL",
+      "countryName": "Chile"
+    },
+    {
+      "continent": "AF",
+      "population": 19294149,
+      "countryCode": "CM",
+      "countryName": "Cameroon"
+    },
+    {
+      "continent": "AS",
+      "population": 1330044000,
+      "countryCode": "CN",
+      "countryName": "China"
+    },
+    {
+      "continent": "SA",
+      "population": 47790000,
+      "countryCode": "CO",
+      "countryName": "Colombia"
+    },
+    {
+      "continent": "NA",
+      "population": 4516220,
+      "countryCode": "CR",
+      "countryName": "Costa Rica"
+    },
+    {
+      "continent": "NA",
+      "population": 11423000,
+      "countryCode": "CU",
+      "countryName": "Cuba"
+    },
+    {
+      "continent": "AF",
+      "population": 508659,
+      "countryCode": "CV",
+      "countryName": "Cape Verde"
+    },
+    {
+      "continent": "NA",
+      "population": 141766,
+      "countryCode": "CW",
+      "countryName": "Curacao"
+    },
+    {
+      "continent": "OC",
+      "population": 1500,
+      "countryCode": "CX",
+      "countryName": "Christmas Island"
+    },
+    {
+      "continent": "EU",
+      "population": 1102677,
+      "countryCode": "CY",
+      "countryName": "Cyprus"
+    },
+    {
+      "continent": "EU",
+      "population": 10476000,
+      "countryCode": "CZ",
+      "countryName": "Czechia"
+    },
+    {
+      "continent": "EU",
+      "population": 81802257,
+      "countryCode": "DE",
+      "countryName": "Germany"
+    },
+    {
+      "continent": "AF",
+      "population": 740528,
+      "countryCode": "DJ",
+      "countryName": "Djibouti"
+    },
+    {
+      "continent": "EU",
+      "population": 5484000,
+      "countryCode": "DK",
+      "countryName": "Denmark"
+    },
+    {
+      "continent": "NA",
+      "population": 72813,
+      "countryCode": "DM",
+      "countryName": "Dominica"
+    },
+    {
+      "continent": "NA",
+      "population": 9823821,
+      "countryCode": "DO",
+      "countryName": "Dominican Republic"
+    },
+    {
+      "continent": "AF",
+      "population": 34586184,
+      "countryCode": "DZ",
+      "countryName": "Algeria"
+    },
+    {
+      "continent": "SA",
+      "population": 14790608,
+      "countryCode": "EC",
+      "countryName": "Ecuador"
+    },
+    {
+      "continent": "EU",
+      "population": 1291170,
+      "countryCode": "EE",
+      "countryName": "Estonia"
+    },
+    {
+      "continent": "AF",
+      "population": 80471869,
+      "countryCode": "EG",
+      "countryName": "Egypt"
+    },
+    {
+      "continent": "AF",
+      "population": 273008,
+      "countryCode": "EH",
+      "countryName": "Western Sahara"
+    },
+    {
+      "continent": "AF",
+      "population": 5792984,
+      "countryCode": "ER",
+      "countryName": "Eritrea"
+    },
+    {
+      "continent": "EU",
+      "population": 46505963,
+      "countryCode": "ES",
+      "countryName": "Spain"
+    },
+    {
+      "continent": "AF",
+      "population": 88013491,
+      "countryCode": "ET",
+      "countryName": "Ethiopia"
+    },
+    {
+      "continent": "EU",
+      "population": 5244000,
+      "countryCode": "FI",
+      "countryName": "Finland"
+    },
+    {
+      "continent": "OC",
+      "population": 875983,
+      "countryCode": "FJ",
+      "countryName": "Fiji"
+    },
+    {
+      "continent": "SA",
+      "population": 2638,
+      "countryCode": "FK",
+      "countryName": "Falkland Islands"
+    },
+    {
+      "continent": "OC",
+      "population": 107708,
+      "countryCode": "FM",
+      "countryName": "Micronesia"
+    },
+    {
+      "continent": "EU",
+      "population": 48228,
+      "countryCode": "FO",
+      "countryName": "Faroe Islands"
+    },
+    {
+      "continent": "EU",
+      "population": 64768389,
+      "countryCode": "FR",
+      "countryName": "France"
+    },
+    {
+      "continent": "AF",
+      "population": 1545255,
+      "countryCode": "GA",
+      "countryName": "Gabon"
+    },
+    {
+      "continent": "EU",
+      "population": 62348447,
+      "countryCode": "GB",
+      "countryName": "United Kingdom"
+    },
+    {
+      "continent": "NA",
+      "population": 107818,
+      "countryCode": "GD",
+      "countryName": "Grenada"
+    },
+    {
+      "continent": "AS",
+      "population": 4630000,
+      "countryCode": "GE",
+      "countryName": "Georgia"
+    },
+    {
+      "continent": "SA",
+      "population": 195506,
+      "countryCode": "GF",
+      "countryName": "French Guiana"
+    },
+    {
+      "continent": "EU",
+      "population": 65228,
+      "countryCode": "GG",
+      "countryName": "Guernsey"
+    },
+    {
+      "continent": "AF",
+      "population": 24339838,
+      "countryCode": "GH",
+      "countryName": "Ghana"
+    },
+    {
+      "continent": "EU",
+      "population": 27884,
+      "countryCode": "GI",
+      "countryName": "Gibraltar"
+    },
+    {
+      "continent": "NA",
+      "population": 56375,
+      "countryCode": "GL",
+      "countryName": "Greenland"
+    },
+    {
+      "continent": "AF",
+      "population": 1593256,
+      "countryCode": "GM",
+      "countryName": "Gambia"
+    },
+    {
+      "continent": "AF",
+      "population": 10324025,
+      "countryCode": "GN",
+      "countryName": "Guinea"
+    },
+    {
+      "continent": "NA",
+      "population": 443000,
+      "countryCode": "GP",
+      "countryName": "Guadeloupe"
+    },
+    {
+      "continent": "AF",
+      "population": 1014999,
+      "countryCode": "GQ",
+      "countryName": "Equatorial Guinea"
+    },
+    {
+      "continent": "EU",
+      "population": 11000000,
+      "countryCode": "GR",
+      "countryName": "Greece"
+    },
+    {
+      "continent": "AN",
+      "population": 30,
+      "countryCode": "GS",
+      "countryName": "South Georgia and the South Sandwich Islands"
+    },
+    {
+      "continent": "NA",
+      "population": 13550440,
+      "countryCode": "GT",
+      "countryName": "Guatemala"
+    },
+    {
+      "continent": "OC",
+      "population": 159358,
+      "countryCode": "GU",
+      "countryName": "Guam"
+    },
+    {
+      "continent": "AF",
+      "population": 1565126,
+      "countryCode": "GW",
+      "countryName": "Guinea-Bissau"
+    },
+    {
+      "continent": "SA",
+      "population": 748486,
+      "countryCode": "GY",
+      "countryName": "Guyana"
+    },
+    {
+      "continent": "AS",
+      "population": 6898686,
+      "countryCode": "HK",
+      "countryName": "Hong Kong"
+    },
+    {
+      "continent": "AN",
+      "population": 0,
+      "countryCode": "HM",
+      "countryName": "Heard Island and McDonald Islands"
+    },
+    {
+      "continent": "NA",
+      "population": 7989415,
+      "countryCode": "HN",
+      "countryName": "Honduras"
+    },
+    {
+      "continent": "EU",
+      "population": 4284889,
+      "countryCode": "HR",
+      "countryName": "Croatia"
+    },
+    {
+      "continent": "NA",
+      "population": 9648924,
+      "countryCode": "HT",
+      "countryName": "Haiti"
+    },
+    {
+      "continent": "EU",
+      "population": 9982000,
+      "countryCode": "HU",
+      "countryName": "Hungary"
+    },
+    {
+      "continent": "AS",
+      "population": 242968342,
+      "countryCode": "ID",
+      "countryName": "Indonesia"
+    },
+    {
+      "continent": "EU",
+      "population": 4622917,
+      "countryCode": "IE",
+      "countryName": "Ireland"
+    },
+    {
+      "continent": "AS",
+      "population": 7353985,
+      "countryCode": "IL",
+      "countryName": "Israel"
+    },
+    {
+      "continent": "EU",
+      "population": 75049,
+      "countryCode": "IM",
+      "countryName": "Isle of Man"
+    },
+    {
+      "continent": "AS",
+      "population": 1173108018,
+      "countryCode": "IN",
+      "countryName": "India"
+    },
+    {
+      "continent": "AS",
+      "population": 4000,
+      "countryCode": "IO",
+      "countryName": "British Indian Ocean Territory"
+    },
+    {
+      "continent": "AS",
+      "population": 29671605,
+      "countryCode": "IQ",
+      "countryName": "Iraq"
+    },
+    {
+      "continent": "AS",
+      "population": 76923300,
+      "countryCode": "IR",
+      "countryName": "Iran"
+    },
+    {
+      "continent": "EU",
+      "population": 308910,
+      "countryCode": "IS",
+      "countryName": "Iceland"
+    },
+    {
+      "continent": "EU",
+      "population": 60340328,
+      "countryCode": "IT",
+      "countryName": "Italy"
+    },
+    {
+      "continent": "EU",
+      "population": 90812,
+      "countryCode": "JE",
+      "countryName": "Jersey"
+    },
+    {
+      "continent": "NA",
+      "population": 2847232,
+      "countryCode": "JM",
+      "countryName": "Jamaica"
+    },
+    {
+      "continent": "AS",
+      "population": 6407085,
+      "countryCode": "JO",
+      "countryName": "Jordan"
+    },
+    {
+      "continent": "AS",
+      "population": 127288000,
+      "countryCode": "JP",
+      "countryName": "Japan"
+    },
+    {
+      "continent": "AF",
+      "population": 40046566,
+      "countryCode": "KE",
+      "countryName": "Kenya"
+    },
+    {
+      "continent": "AS",
+      "population": 5776500,
+      "countryCode": "KG",
+      "countryName": "Kyrgyzstan"
+    },
+    {
+      "continent": "AS",
+      "population": 14453680,
+      "countryCode": "KH",
+      "countryName": "Cambodia"
+    },
+    {
+      "continent": "OC",
+      "population": 92533,
+      "countryCode": "KI",
+      "countryName": "Kiribati"
+    },
+    {
+      "continent": "AF",
+      "population": 773407,
+      "countryCode": "KM",
+      "countryName": "Comoros"
+    },
+    {
+      "continent": "NA",
+      "population": 51134,
+      "countryCode": "KN",
+      "countryName": "Saint Kitts and Nevis"
+    },
+    {
+      "continent": "AS",
+      "population": 22912177,
+      "countryCode": "KP",
+      "countryName": "North Korea"
+    },
+    {
+      "continent": "AS",
+      "population": 48422644,
+      "countryCode": "KR",
+      "countryName": "South Korea"
+    },
+    {
+      "continent": "AS",
+      "population": 2789132,
+      "countryCode": "KW",
+      "countryName": "Kuwait"
+    },
+    {
+      "continent": "NA",
+      "population": 44270,
+      "countryCode": "KY",
+      "countryName": "Cayman Islands"
+    },
+    {
+      "continent": "AS",
+      "population": 15340000,
+      "countryCode": "KZ",
+      "countryName": "Kazakhstan"
+    },
+    {
+      "continent": "AS",
+      "population": 6368162,
+      "countryCode": "LA",
+      "countryName": "Laos"
+    },
+    {
+      "continent": "AS",
+      "population": 4125247,
+      "countryCode": "LB",
+      "countryName": "Lebanon"
+    },
+    {
+      "continent": "NA",
+      "population": 160922,
+      "countryCode": "LC",
+      "countryName": "Saint Lucia"
+    },
+    {
+      "continent": "EU",
+      "population": 35000,
+      "countryCode": "LI",
+      "countryName": "Liechtenstein"
+    },
+    {
+      "continent": "AS",
+      "population": 21513990,
+      "countryCode": "LK",
+      "countryName": "Sri Lanka"
+    },
+    {
+      "continent": "AF",
+      "population": 3685076,
+      "countryCode": "LR",
+      "countryName": "Liberia"
+    },
+    {
+      "continent": "AF",
+      "population": 1919552,
+      "countryCode": "LS",
+      "countryName": "Lesotho"
+    },
+    {
+      "continent": "EU",
+      "population": 2944459,
+      "countryCode": "LT",
+      "countryName": "Lithuania"
+    },
+    {
+      "continent": "EU",
+      "population": 497538,
+      "countryCode": "LU",
+      "countryName": "Luxembourg"
+    },
+    {
+      "continent": "EU",
+      "population": 2217969,
+      "countryCode": "LV",
+      "countryName": "Latvia"
+    },
+    {
+      "continent": "AF",
+      "population": 6461454,
+      "countryCode": "LY",
+      "countryName": "Libya"
+    },
+    {
+      "continent": "AF",
+      "population": 33848242,
+      "countryCode": "MA",
+      "countryName": "Morocco"
+    },
+    {
+      "continent": "EU",
+      "population": 32965,
+      "countryCode": "MC",
+      "countryName": "Monaco"
+    },
+    {
+      "continent": "EU",
+      "population": 4324000,
+      "countryCode": "MD",
+      "countryName": "Moldova"
+    },
+    {
+      "continent": "EU",
+      "population": 666730,
+      "countryCode": "ME",
+      "countryName": "Montenegro"
+    },
+    {
+      "continent": "NA",
+      "population": 35925,
+      "countryCode": "MF",
+      "countryName": "Saint Martin"
+    },
+    {
+      "continent": "AF",
+      "population": 21281844,
+      "countryCode": "MG",
+      "countryName": "Madagascar"
+    },
+    {
+      "continent": "OC",
+      "population": 65859,
+      "countryCode": "MH",
+      "countryName": "Marshall Islands"
+    },
+    {
+      "continent": "EU",
+      "population": 2062294,
+      "countryCode": "MK",
+      "countryName": "Macedonia"
+    },
+    {
+      "continent": "AF",
+      "population": 13796354,
+      "countryCode": "ML",
+      "countryName": "Mali"
+    },
+    {
+      "continent": "AS",
+      "population": 53414374,
+      "countryCode": "MM",
+      "countryName": "Myanmar [Burma]"
+    },
+    {
+      "continent": "AS",
+      "population": 3086918,
+      "countryCode": "MN",
+      "countryName": "Mongolia"
+    },
+    {
+      "continent": "AS",
+      "population": 449198,
+      "countryCode": "MO",
+      "countryName": "Macao"
+    },
+    {
+      "continent": "OC",
+      "population": 53883,
+      "countryCode": "MP",
+      "countryName": "Northern Mariana Islands"
+    },
+    {
+      "continent": "NA",
+      "population": 432900,
+      "countryCode": "MQ",
+      "countryName": "Martinique"
+    },
+    {
+      "continent": "AF",
+      "population": 3205060,
+      "countryCode": "MR",
+      "countryName": "Mauritania"
+    },
+    {
+      "continent": "NA",
+      "population": 9341,
+      "countryCode": "MS",
+      "countryName": "Montserrat"
+    },
+    {
+      "continent": "EU",
+      "population": 403000,
+      "countryCode": "MT",
+      "countryName": "Malta"
+    },
+    {
+      "continent": "AF",
+      "population": 1294104,
+      "countryCode": "MU",
+      "countryName": "Mauritius"
+    },
+    {
+      "continent": "AS",
+      "population": 395650,
+      "countryCode": "MV",
+      "countryName": "Maldives"
+    },
+    {
+      "continent": "AF",
+      "population": 15447500,
+      "countryCode": "MW",
+      "countryName": "Malawi"
+    },
+    {
+      "continent": "NA",
+      "population": 112468855,
+      "countryCode": "MX",
+      "countryName": "Mexico"
+    },
+    {
+      "continent": "AS",
+      "population": 28274729,
+      "countryCode": "MY",
+      "countryName": "Malaysia"
+    },
+    {
+      "continent": "AF",
+      "population": 22061451,
+      "countryCode": "MZ",
+      "countryName": "Mozambique"
+    },
+    {
+      "continent": "AF",
+      "population": 2128471,
+      "countryCode": "NA",
+      "countryName": "Namibia"
+    },
+    {
+      "continent": "OC",
+      "population": 216494,
+      "countryCode": "NC",
+      "countryName": "New Caledonia"
+    },
+    {
+      "continent": "AF",
+      "population": 15878271,
+      "countryCode": "NE",
+      "countryName": "Niger"
+    },
+    {
+      "continent": "OC",
+      "population": 1828,
+      "countryCode": "NF",
+      "countryName": "Norfolk Island"
+    },
+    {
+      "continent": "AF",
+      "population": 154000000,
+      "countryCode": "NG",
+      "countryName": "Nigeria"
+    },
+    {
+      "continent": "NA",
+      "population": 5995928,
+      "countryCode": "NI",
+      "countryName": "Nicaragua"
+    },
+    {
+      "continent": "EU",
+      "population": 16645000,
+      "countryCode": "NL",
+      "countryName": "Netherlands"
+    },
+    {
+      "continent": "EU",
+      "population": 5009150,
+      "countryCode": "NO",
+      "countryName": "Norway"
+    },
+    {
+      "continent": "AS",
+      "population": 28951852,
+      "countryCode": "NP",
+      "countryName": "Nepal"
+    },
+    {
+      "continent": "OC",
+      "population": 10065,
+      "countryCode": "NR",
+      "countryName": "Nauru"
+    },
+    {
+      "continent": "OC",
+      "population": 2166,
+      "countryCode": "NU",
+      "countryName": "Niue"
+    },
+    {
+      "continent": "OC",
+      "population": 4252277,
+      "countryCode": "NZ",
+      "countryName": "New Zealand"
+    },
+    {
+      "continent": "AS",
+      "population": 2967717,
+      "countryCode": "OM",
+      "countryName": "Oman"
+    },
+    {
+      "continent": "NA",
+      "population": 3410676,
+      "countryCode": "PA",
+      "countryName": "Panama"
+    },
+    {
+      "continent": "SA",
+      "population": 29907003,
+      "countryCode": "PE",
+      "countryName": "Peru"
+    },
+    {
+      "continent": "OC",
+      "population": 270485,
+      "countryCode": "PF",
+      "countryName": "French Polynesia"
+    },
+    {
+      "continent": "OC",
+      "population": 6064515,
+      "countryCode": "PG",
+      "countryName": "Papua New Guinea"
+    },
+    {
+      "continent": "AS",
+      "population": 99900177,
+      "countryCode": "PH",
+      "countryName": "Philippines"
+    },
+    {
+      "continent": "AS",
+      "population": 184404791,
+      "countryCode": "PK",
+      "countryName": "Pakistan"
+    },
+    {
+      "continent": "EU",
+      "population": 38500000,
+      "countryCode": "PL",
+      "countryName": "Poland"
+    },
+    {
+      "continent": "NA",
+      "population": 7012,
+      "countryCode": "PM",
+      "countryName": "Saint Pierre and Miquelon"
+    },
+    {
+      "continent": "OC",
+      "population": 46,
+      "countryCode": "PN",
+      "countryName": "Pitcairn Islands"
+    },
+    {
+      "continent": "NA",
+      "population": 3916632,
+      "countryCode": "PR",
+      "countryName": "Puerto Rico"
+    },
+    {
+      "continent": "AS",
+      "population": 3800000,
+      "countryCode": "PS",
+      "countryName": "Palestine"
+    },
+    {
+      "continent": "EU",
+      "population": 10676000,
+      "countryCode": "PT",
+      "countryName": "Portugal"
+    },
+    {
+      "continent": "OC",
+      "population": 19907,
+      "countryCode": "PW",
+      "countryName": "Palau"
+    },
+    {
+      "continent": "SA",
+      "population": 6375830,
+      "countryCode": "PY",
+      "countryName": "Paraguay"
+    },
+    {
+      "continent": "AS",
+      "population": 840926,
+      "countryCode": "QA",
+      "countryName": "Qatar"
+    },
+    {
+      "continent": "AF",
+      "population": 776948,
+      "countryCode": "RE",
+      "countryName": "Réunion"
+    },
+    {
+      "continent": "EU",
+      "population": 21959278,
+      "countryCode": "RO",
+      "countryName": "Romania"
+    },
+    {
+      "continent": "EU",
+      "population": 7344847,
+      "countryCode": "RS",
+      "countryName": "Serbia"
+    },
+    {
+      "continent": "EU",
+      "population": 140702000,
+      "countryCode": "RU",
+      "countryName": "Russia"
+    },
+    {
+      "continent": "AF",
+      "population": 11055976,
+      "countryCode": "RW",
+      "countryName": "Rwanda"
+    },
+    {
+      "continent": "AS",
+      "population": 25731776,
+      "countryCode": "SA",
+      "countryName": "Saudi Arabia"
+    },
+    {
+      "continent": "OC",
+      "population": 559198,
+      "countryCode": "SB",
+      "countryName": "Solomon Islands"
+    },
+    {
+      "continent": "AF",
+      "population": 88340,
+      "countryCode": "SC",
+      "countryName": "Seychelles"
+    },
+    {
+      "continent": "AF",
+      "population": 35000000,
+      "countryCode": "SD",
+      "countryName": "Sudan"
+    },
+    {
+      "continent": "EU",
+      "population": 9828655,
+      "countryCode": "SE",
+      "countryName": "Sweden"
+    },
+    {
+      "continent": "AS",
+      "population": 4701069,
+      "countryCode": "SG",
+      "countryName": "Singapore"
+    },
+    {
+      "continent": "AF",
+      "population": 7460,
+      "countryCode": "SH",
+      "countryName": "Saint Helena"
+    },
+    {
+      "continent": "EU",
+      "population": 2007000,
+      "countryCode": "SI",
+      "countryName": "Slovenia"
+    },
+    {
+      "continent": "EU",
+      "population": 2550,
+      "countryCode": "SJ",
+      "countryName": "Svalbard and Jan Mayen"
+    },
+    {
+      "continent": "EU",
+      "population": 5455000,
+      "countryCode": "SK",
+      "countryName": "Slovakia"
+    },
+    {
+      "continent": "AF",
+      "population": 5245695,
+      "countryCode": "SL",
+      "countryName": "Sierra Leone"
+    },
+    {
+      "continent": "EU",
+      "population": 31477,
+      "countryCode": "SM",
+      "countryName": "San Marino"
+    },
+    {
+      "continent": "AF",
+      "population": 12323252,
+      "countryCode": "SN",
+      "countryName": "Senegal"
+    },
+    {
+      "continent": "AF",
+      "population": 10112453,
+      "countryCode": "SO",
+      "countryName": "Somalia"
+    },
+    {
+      "continent": "SA",
+      "population": 492829,
+      "countryCode": "SR",
+      "countryName": "Suriname"
+    },
+    {
+      "continent": "AF",
+      "population": 8260490,
+      "countryCode": "SS",
+      "countryName": "South Sudan"
+    },
+    {
+      "continent": "AF",
+      "population": 175808,
+      "countryCode": "ST",
+      "countryName": "São Tomé and Príncipe"
+    },
+    {
+      "continent": "NA",
+      "population": 6052064,
+      "countryCode": "SV",
+      "countryName": "El Salvador"
+    },
+    {
+      "continent": "NA",
+      "population": 37429,
+      "countryCode": "SX",
+      "countryName": "Sint Maarten"
+    },
+    {
+      "continent": "AS",
+      "population": 22198110,
+      "countryCode": "SY",
+      "countryName": "Syria"
+    },
+    {
+      "continent": "AF",
+      "population": 1354051,
+      "countryCode": "SZ",
+      "countryName": "Swaziland"
+    },
+    {
+      "continent": "NA",
+      "population": 20556,
+      "countryCode": "TC",
+      "countryName": "Turks and Caicos Islands"
+    },
+    {
+      "continent": "AF",
+      "population": 10543464,
+      "countryCode": "TD",
+      "countryName": "Chad"
+    },
+    {
+      "continent": "AN",
+      "population": 140,
+      "countryCode": "TF",
+      "countryName": "French Southern Territories"
+    },
+    {
+      "continent": "AF",
+      "population": 6587239,
+      "countryCode": "TG",
+      "countryName": "Togo"
+    },
+    {
+      "continent": "AS",
+      "population": 67089500,
+      "countryCode": "TH",
+      "countryName": "Thailand"
+    },
+    {
+      "continent": "AS",
+      "population": 7487489,
+      "countryCode": "TJ",
+      "countryName": "Tajikistan"
+    },
+    {
+      "continent": "OC",
+      "population": 1466,
+      "countryCode": "TK",
+      "countryName": "Tokelau"
+    },
+    {
+      "continent": "OC",
+      "population": 1154625,
+      "countryCode": "TL",
+      "countryName": "East Timor"
+    },
+    {
+      "continent": "AS",
+      "population": 4940916,
+      "countryCode": "TM",
+      "countryName": "Turkmenistan"
+    },
+    {
+      "continent": "AF",
+      "population": 10589025,
+      "countryCode": "TN",
+      "countryName": "Tunisia"
+    },
+    {
+      "continent": "OC",
+      "population": 122580,
+      "countryCode": "TO",
+      "countryName": "Tonga"
+    },
+    {
+      "continent": "AS",
+      "population": 77804122,
+      "countryCode": "TR",
+      "countryName": "Turkey"
+    },
+    {
+      "continent": "NA",
+      "population": 1328019,
+      "countryCode": "TT",
+      "countryName": "Trinidad and Tobago"
+    },
+    {
+      "continent": "OC",
+      "population": 10472,
+      "countryCode": "TV",
+      "countryName": "Tuvalu"
+    },
+    {
+      "continent": "AS",
+      "population": 22894384,
+      "countryCode": "TW",
+      "countryName": "Taiwan"
+    },
+    {
+      "continent": "AF",
+      "population": 41892895,
+      "countryCode": "TZ",
+      "countryName": "Tanzania"
+    },
+    {
+      "continent": "EU",
+      "population": 45415596,
+      "countryCode": "UA",
+      "countryName": "Ukraine"
+    },
+    {
+      "continent": "AF",
+      "population": 33398682,
+      "countryCode": "UG",
+      "countryName": "Uganda"
+    },
+    {
+      "continent": "OC",
+      "population": 0,
+      "countryCode": "UM",
+      "countryName": "U.S. Minor Outlying Islands"
+    },
+    {
+      "continent": "NA",
+      "population": 310232863,
+      "countryCode": "US",
+      "countryName": "United States"
+    },
+    {
+      "continent": "SA",
+      "population": 3477000,
+      "countryCode": "UY",
+      "countryName": "Uruguay"
+    },
+    {
+      "continent": "AS",
+      "population": 27865738,
+      "countryCode": "UZ",
+      "countryName": "Uzbekistan"
+    },
+    {
+      "continent": "EU",
+      "population": 921,
+      "countryCode": "VA",
+      "countryName": "Vatican City"
+    },
+    {
+      "continent": "NA",
+      "population": 104217,
+      "countryCode": "VC",
+      "countryName": "Saint Vincent and the Grenadines"
+    },
+    {
+      "continent": "SA",
+      "population": 27223228,
+      "countryCode": "VE",
+      "countryName": "Venezuela"
+    },
+    {
+      "continent": "NA",
+      "population": 21730,
+      "countryCode": "VG",
+      "countryName": "British Virgin Islands"
+    },
+    {
+      "continent": "NA",
+      "population": 108708,
+      "countryCode": "VI",
+      "countryName": "U.S. Virgin Islands"
+    },
+    {
+      "continent": "AS",
+      "population": 89571130,
+      "countryCode": "VN",
+      "countryName": "Vietnam"
+    },
+    {
+      "continent": "OC",
+      "population": 221552,
+      "countryCode": "VU",
+      "countryName": "Vanuatu"
+    },
+    {
+      "continent": "OC",
+      "population": 16025,
+      "countryCode": "WF",
+      "countryName": "Wallis and Futuna"
+    },
+    {
+      "continent": "OC",
+      "population": 192001,
+      "countryCode": "WS",
+      "countryName": "Samoa"
+    },
+    {
+      "continent": "EU",
+      "population": 1800000,
+      "countryCode": "XK",
+      "countryName": "Kosovo"
+    },
+    {
+      "continent": "AS",
+      "population": 23495361,
+      "countryCode": "YE",
+      "countryName": "Yemen"
+    },
+    {
+      "continent": "AF",
+      "population": 159042,
+      "countryCode": "YT",
+      "countryName": "Mayotte"
+    },
+    {
+      "continent": "AF",
+      "population": 49000000,
+      "countryCode": "ZA",
+      "countryName": "South Africa"
+    },
+    {
+      "continent": "AF",
+      "population": 13460305,
+      "countryCode": "ZM",
+      "countryName": "Zambia"
+    },
+    {
+      "continent": "AF",
+      "population": 13061000,
+      "countryCode": "ZW",
+      "countryName": "Zimbabwe"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+.links line {
+  stroke: #999;
+  stroke-opacity: 0.6;
+}
+
+.tooltip {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  background-color: #ccc;
+  border: 5px solid #999;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.tooltip p {
+  margin: 0 0 5px;
+  padding: 0;
+  text-align: center;
+}
+
+.tooltip ol {
+  margin: 0;
+  padding: 0 15px;
+}
+
+#checkboxes {
+  display: inline-block;
+  vertical-align: top;
+}

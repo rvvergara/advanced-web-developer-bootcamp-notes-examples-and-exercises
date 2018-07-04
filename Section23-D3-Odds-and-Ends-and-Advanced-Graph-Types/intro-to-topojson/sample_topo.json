@@ -1,0 +1,70 @@
+{
+  "type": "Topology",
+  "objects": {
+    "collection": {
+      "type": "GeometryCollection",
+      "geometries": [
+        {
+          "type": "Polygon",
+          "properties": { "color": "blue" },
+          "arcs": [
+            [ 0, 1, 2 ]
+          ]
+        },
+        {
+          "type": "Polygon",
+          "properties": { "color": "orange" },
+          "arcs": [
+            [ 3, 4, -1 ]
+          ]
+        },
+        {
+          "type": "Polygon",
+          "properties": { "color": "green" },
+          "arcs": [
+            [ 5, 6 ]
+          ]
+        }
+      ]
+    }
+  },
+  "arcs": [
+    [
+      [ 0,  100 ],
+      [ 100, 0 ]
+    ],
+    [
+      [ 100, 100 ],
+      [ 0, -100 ]
+    ],
+    [
+      [ 100, 0 ],
+      [ -100, 0 ],
+      [ 0, 100 ]
+    ],
+    [
+      [ 0, 100 ],
+      [ 0, 100 ],
+      [ 100, 0 ]
+    ],
+    [ 
+      [100, 200 ],
+      [ 0, -100 ]
+    ],
+    [ 
+      [ 100, 0 ],
+      [ 100, 0 ],
+      [ 0, 200 ],
+      [ -100, 0 ]
+    ],
+    [
+      [ 100, 200 ],
+      [ 0, -200 ]
+    ]
+  ],
+  "bbox": [ 0, 0, 200, 200 ],
+  "transform": {
+    "scale": [ 1, 1 ],
+    "translate": [ 0, 0 ]
+  }
+}
