@@ -24,6 +24,10 @@ let width   =   800, height = 600, padding = 40,
     svg =  d3.select("svg")
                 .attr("width",width)
                 .attr("height",height),
+    
+    circUpd = d3.selectAll("circle")
+                    .data(regionData)
+                    .transition(),
 
     updateSelect = svg
                    .selectAll("circle")
@@ -42,12 +46,17 @@ let width   =   800, height = 600, padding = 40,
     updateSelect
         .enter()
         .append("circle")
+        .transition()
+        .duration(2000)
+        .delay((d,i)=>i*100)
         .attr("cx",d=>litRateScale(d.adultLiteracyRate))
         .attr("cy",d=>subscriberScale(d.subscribersPer100))
         .attr("r",d=>radiusScale(d.urbanPopulationRate))
         .attr("fill",d=>colorScale(d.extremePovertyRate))
         .attr("stroke-width","0.5")
-        .attr("stroke","green")
+        .attr("stroke","green");
+
+    d3.selectAll("circle")
         .on("mousemove",d=>showTooltip(d))
         .on("touchstart",d=>showTooltip(d))
         .on("mouseout",d=>hideTooltip())

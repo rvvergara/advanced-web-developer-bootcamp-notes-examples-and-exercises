@@ -36,7 +36,14 @@ document.addEventListener("DOMContentLoaded",()=>{
     function genUpdatePattern(bins,xScale,yScale){
         let  updateSelect    =   svg
                                     .selectAll("rect")
-                                    .data(bins);
+                                    .data(bins),
+
+            rectTransition  =   d3.selectAll("rect")
+                                    .data(bins)
+                                    .transition()
+                                    .duration(2000)
+                                    .ease(d3.easeLinear)
+                                    .delay((d,i)=>i*100)
         updateSelect
             .exit()
             .remove();
@@ -51,7 +58,13 @@ document.addEventListener("DOMContentLoaded",()=>{
             .attr("height",d=>height - yScale(d.length)-padding)
             .attr("fill","purple")
             .attr("stroke","yellow")
-            .attr("stroke-width","1px")
+            .attr("stroke-width","1px");
+
+        rectTransition
+        .attr("y",d=>yScale(d.length))
+        .attr("height",d=>height - yScale(d.length)-padding);
+
+        d3.selectAll("rect")
             .on("mousemove",d=>showTooltip(d))
             .on("touchstart",d=>showTooltip(d))
             .on("mouseout",d=>hideToolTip())
