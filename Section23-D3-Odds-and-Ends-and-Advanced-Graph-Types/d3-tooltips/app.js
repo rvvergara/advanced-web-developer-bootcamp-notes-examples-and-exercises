@@ -4,23 +4,31 @@ let width   =   500, height = 500, padding = 30,
     colorScale =   d3.scaleLinear().domain(d3.extent(birthData2011,d=>d.population/d.area)).range(["lightgreen","black"]),
     radiusScale = d3.scaleLinear().domain(d3.extent(birthData2011,d=>d.births)).range([2,40]),
     xAxis = d3.axisBottom(xScale).tickSize(-height+2*padding).tickSizeOuter(0),
-    yAxis = d3.axisLeft(yScale).tickSize(-width+2*padding).tickSizeOuter(0);
-
-let svg =   d3.select("svg")
+    yAxis = d3.axisLeft(yScale).tickSize(-width+2*padding).tickSizeOuter(0),
+    
+    svg =   d3.select("svg")
                 .attr("width",width)
-                .attr("height",height);
+                .attr("height",height),
 
-let updateSelection =   svg
+    updateSelection =   svg
       .selectAll("circle")
-      .data(birthData2011);
+      .data(birthData2011),
 
+    tooltip = d3.select("body")
+                .append("div")
+                  .classed("tooltip",true);
+  
 updateSelection
     .enter()
     .append("circle")
     .attr("cx",d=>xScale(d.births/d.population))
     .attr("cy",d=>yScale(d.lifeExpectancy))
     .attr("r",d=>radiusScale(d.births))
-    .attr("fill",d=>colorScale(d.population/d.area));
+    .attr("fill",d=>colorScale(d.population/d.area))
+    .on("mousemove",d=>showTooltip(d))
+    .on("touchstart",d=>showTooltip(d))
+    .on("mouseout",()=>hideTooltip())
+    .on("touchend",()=>hideTooltip())
 
 svg
     .append("g")
@@ -59,3 +67,22 @@ svg
         .text("Life Expectancy")
         .attr("transform","rotate(90)")
         .attr("font-weight","bold");
+
+function showTooltip(d){
+  tooltip
+        .style("opacity",1)
+        .style("left",d3.event.x - (tooltip.node().offsetWidth/2)+"px")
+        .style("top",d3.event.y+25+"px")
+        .html(`<h4>${d.region}</h4>
+                <ul>
+                  <li>Area: ${d.area.toLocaleString()} sqm</li>
+                  <li>Population: ${d.population.toLocaleString()}</li>
+                  <li>Births: ${d.births.toLocaleString()}</li>
+                  <li>Life Expectancy: ${d.lifeExpectancy}</li>
+                </ul>`);      
+}
+
+function hideTooltip(){
+  tooltip
+        .style("opacity",0)
+}
