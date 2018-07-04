@@ -2,6 +2,7 @@ let width   =   500,
     height  =   500,
     minYr   =   d3.min(birthData,d=>d.year),
     maxYr   =   d3.max(birthData,d=>d.year),
+    tooltip =   d3.select("body").append("div").classed("tooltip",true),
     months  =   Array.from(new Set(birthData.map(d=>d.month))),
     qtrs  =   [["January","February","March"],["April","May","June"],["July","August","September"],["October","November","December"]],
     monthColors  =   d3.scaleOrdinal()
@@ -24,7 +25,7 @@ let width   =   500,
     qtrChart  =   svg    
                     .append("g")
                     .attr("transform",`translate(${width/2},${height/2})`)
-                    .classed("qtrChart",true)
+                    .classed("qtrChart",true);
 
 generatePie(+input.property("value"));
 
@@ -37,6 +38,7 @@ function generatePie(year){
                         .value(d=>d.births)
                         .sort((a,b)=>months.indexOf(a.month)-months.indexOf(b.month))(yrData),
         qtrArcs     = d3.pie()
+                        .value(d=>d.births)
                         .sort((a,b)=>qtrData.indexOf(a)-qtrData.indexOf(b))(qtrData),    
         monthPath    = d3.arc()
                         .outerRadius(width/2 - 40)
@@ -67,7 +69,11 @@ function generatePie(year){
             .classed("monthArc",true)
            .merge(monthUpdate)
              .attr("d",monthPath)
-             .attr("fill",d=>monthColors(d.data.month));
+             .attr("fill",d=>monthColors(d.data.month))
+             .on("mousemove",d=>showTooltip(d))
+             .on("touchstart",d=>showTooltip(d))
+             .on("mouseout",d=>hideTooltip())
+             .on("touchend",d=>hideTooltip())
 
         qtrUpdate
             .enter()
@@ -75,15 +81,47 @@ function generatePie(year){
             .classed("qtrArc",true)
           .merge(qtrUpdate)
             .attr("d",qtrPath)
-            .attr("fill",(d,i)=>qtrColors(i+1));            
+            .attr("fill",(d,i)=>qtrColors(i+1))
+            .on("mousemove",qtrArcs=>qtrTooltip(qtrArcs))   
+            .on("touchstart",qtrArcs=>qtrTooltip(qtrArcs))
+            .on("mouseout",d=>hideTooltip())
+            .on("touchend",d=>hideTooltip())   
 }
 
 function dataByQtrs(yrData){
-    let birthsData = [0,0,0,0];
+    let birthsData = [1,2,3,4].map(el=>{
+        let obj = {};
+        obj.quarter = el;
+        obj.births = 0;    
+        return obj;
+    });
     for(let i=0;i<4;i++){
         yrData.forEach(el=>{
-            qtrs[i].includes(el.month)?birthsData[i]+=el.births:birthsData[i]+=0;
+            qtrs[i].includes(el.month)?birthsData[i].births+=el.births:birthsData[i].births+=0;
+            birthsData[i].year = el.year;
         })
     }
     return birthsData;
+}
+
+function showTooltip(d){
+    tooltip
+        .style("opacity",1)
+        .style("left",d3.event.x-(tooltip.node().offsetWidth/2)+"px")
+        .style("top",d3.event.y+25+"px")
+        .html(`<h4>${d.data.month} ${d.data.year}<h4>
+                <h5>${d.data.births.toLocaleString()} births</h5>`)
+}
+
+function qtrTooltip(d){
+    tooltip
+        .style("opacity",1)
+        .style("left",d3.event.x-(tooltip.node().offsetWidth/2)+"px")
+        .style("top",d3.event.y+25+"px")
+        .html(`<h3>Q${d.data.quarter} ${d.data.year}</h3>
+                <h4>${d.data.births.toLocaleString( )} births</h4>`)
+}
+
+function hideTooltip(){
+    tooltip.style("opacity",0);
 }
