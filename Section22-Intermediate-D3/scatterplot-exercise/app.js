@@ -17,6 +17,10 @@ let width   =   800, height = 600, padding = 40,
 
     legendColorScale = d3.scaleLinear().domain(d3.extent(povertyLevelForLegend)).range(["yellow","red"]),
 
+    tooltip     = d3.select("body")
+                    .append("div")
+                      .classed("tooltip",true),
+
     svg =  d3.select("svg")
                 .attr("width",width)
                 .attr("height",height),
@@ -43,7 +47,10 @@ let width   =   800, height = 600, padding = 40,
         .attr("r",d=>radiusScale(d.urbanPopulationRate))
         .attr("fill",d=>colorScale(d.extremePovertyRate))
         .attr("stroke-width","0.5")
-        .attr("stroke","green");
+        .attr("stroke","green")
+        .on("mousemove",d=>showTooltip(d))
+        .on("touchstart",d=>showTooltip(d))
+        .on("mouseout",d=>hideTooltip())
 
     svg
         .append("text")
@@ -125,6 +132,26 @@ let width   =   800, height = 600, padding = 40,
         .attr("font-size","0.8em")
         .attr("fill","#444")
         .attr("font-weight","bold");
+
+    function showTooltip(d){
+        tooltip
+            .style("opacity",1)
+            .style("left",d3.event.x-(tooltip.node().offsetWidth/2)+"px")
+            .style("top",d3.event.y+25+"px")
+            .html(`<h4>${d.region}</h4>
+                    <ul>
+                        <li>Subscribers per 100: <strong>${d.subscribersPer100}</strong></li>
+                        <li>Adult Literacy Rate: <strong>${d.adultLiteracyRate}%</strong></li>
+                        <li>Growth Rate: <strong>${d.growthRate}%</strong></li>
+                        <li>Urban Population Rate: <strong>${d.urbanPopulationRate}%</strong></li>
+                        <li>Extreme Poverty Rate: <strong>${d.extremePovertyRate}%</strong></li>
+                        <li>Median Age: <strong>${d.medianAge} yrs old</strong></li>
+                    </ul>`)
+    }
+
+    function hideTooltip(){
+        tooltip.style("opacity",0);
+    }
         
 
 

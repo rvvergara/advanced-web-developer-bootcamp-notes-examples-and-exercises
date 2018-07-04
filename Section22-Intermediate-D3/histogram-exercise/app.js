@@ -3,6 +3,9 @@ document.addEventListener("DOMContentLoaded",()=>{
     usableData = regionData.filter(d=>d.medianAge !== null),
     disp    =   d3.select("p"),
     input   =   d3.select("input"),
+    tooltip =   d3.select("body")
+                    .append('div')
+                    .classed("tooltip",true),
     svg     =   d3.select("svg")
                     .attr("width",width)
                     .attr("height",height);
@@ -48,7 +51,11 @@ document.addEventListener("DOMContentLoaded",()=>{
             .attr("height",d=>height - yScale(d.length)-padding)
             .attr("fill","purple")
             .attr("stroke","yellow")
-            .attr("stroke-width","1px");
+            .attr("stroke-width","1px")
+            .on("mousemove",d=>showTooltip(d))
+            .on("touchstart",d=>showTooltip(d))
+            .on("mouseout",d=>hideToolTip())
+            .on("touchend",d=>hideToolTip())
     }
     
     function createAxes(binLength,xScale,yScale){
@@ -91,5 +98,16 @@ document.addEventListener("DOMContentLoaded",()=>{
             .attr("text-anchor","middle")
             .attr("font-family","Arial")
             .attr("font-weight","bold");
+    }
+    function showTooltip(d){
+        tooltip
+            .style("opacity",1)
+            .style("left",d3.event.x-(tooltip.node().offsetWidth/2)+"px")
+            .style("top",d3.event.y+25+"px")
+            .html(`<p>${d.x0} - ${d.x1} yrs old - <strong>${d.length}</strong></p>`)
+    }
+    function hideToolTip(){
+        tooltip
+          .style("opacity",0)
     }
 });

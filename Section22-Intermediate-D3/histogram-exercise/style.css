@@ -11,3 +11,24 @@ svg,input {
 p  {
   text-align: center;
 }
+
+.tooltip {
+  opacity: 0;
+  position: absolute;
+  pointer-events: none;
+  background-color: floralwhite;
+  border: 8px solid #5252ec;
+  border-radius: 8px;
+  padding: 5px;
+  transition: 0.6s opacity;
+}
+
+.tooltip:before {
+  content: ' ';
+  position: absolute;
+  border: 12px solid transparent;
+  border-bottom-color: #5252ec;
+  top: -30px;
+  left: 50%;
+  margin-left: 6px;
+}

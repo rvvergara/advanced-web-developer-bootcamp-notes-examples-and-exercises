@@ -16,7 +16,11 @@ let minYear     = d3.min(birthData, d => d.year),
     input       =   d3.select("input")
                         .attr("min",minYear)
                         .attr("max",maxYr)
-                        .attr("value",minYear);
+                        .attr("value",minYear),
+
+    tooltip     =   d3.select("body")
+                      .append("div")
+                        .classed("tooltip",true);
 
 generatePie(+input.property("value"));
 
@@ -48,7 +52,26 @@ function generatePie(yr){
         .merge(updateSelect)
             .attr("d",path)
             .attr("fill",d=>colorScale(d.data.continent))
-            .attr("stroke","black"); 
+            .attr("stroke","black")
+            .on("mousemove",d=>showToolTip(d))
+            .on("mouseout",d=>hideToolTip())
 }
 
+function showToolTip(d){
+    tooltip
+        .style("opacity",1)
+        .html(`<h4>${d.data.region}</h4>
+                <h5>${d.data.year}</h5>
+                <ul>
+                    <li>Continent: ${d.data.continent}</li>
+                    <li>Births: ${d.data.births.toLocaleString()}</li>
+                </ul>`)
+        .style("left",d3.event.x-(tooltip.node().offsetWidth/2)+"px")
+        .style("top",d3.event.y+25+"px");
+}
+
+function hideToolTip(){
+    tooltip
+        .style("opacity",0);
+}
     
