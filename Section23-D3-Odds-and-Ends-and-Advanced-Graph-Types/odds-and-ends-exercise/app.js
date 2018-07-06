@@ -33,26 +33,7 @@ d3.queue()
             .text(d=>d)
             .node();  
 
-    // Assign data to selected option in select box:
-    let selectedIndex = select.node().options.selectedIndex,
-        selectedCountry = select.node()[selectedIndex].value,
-        countryData = selectionData(usableData,selectedCountry),
-        gdpMax = d3.max(countryData,d=>+d.gdp_total),
-        barwidth    = (width-2*padding)/countryData.length - barPadding,
-        yScale = d3.scaleLinear().domain([0,gdpMax]).range([height-2*padding,padding]),
-
-        updateSelect = svg
-                        .selectAll("rect")
-                          .data(countryData);
-        
-    // Create axes
-    createAxes(data0Processed[0],yScale);
-
-    let enterSelect = updateSelect
-                        .enter()
-                        .append("rect");
-
-    rectangleDims(enterSelect);
+    buildRects(select,usableData);
 
     d3.selectAll("rect")
         .on("mousemove",d=>showTooltip(d))
@@ -60,42 +41,10 @@ d3.queue()
         .on("mouseout",d=>hideTooltip(d))
         .on("touchend",d=>hideTooltip(d));
 
-    displayCountry(selectedCountry);
+    displayCountry(select.node()[select.node().options.selectedIndex].value);
          
     select.on("change",()=>{
-        selectedIndex = select.node().options.selectedIndex,
-        selectedCountry = select.node()[selectedIndex].value,
-        countryData = selectionData(usableData,selectedCountry),
-        gdpMax = d3.max(countryData,d=>+d.gdp_total),
-        barwidth    = (width-2*padding)/countryData.length - barPadding,
-        yScale = d3.scaleLinear().domain([0,gdpMax]).range([height-2*padding,padding]);
-
-    d3.select(".yAxis")
-        .transition()
-        .duration(2000)
-        .call(d3.axisLeft(yScale).tickSize(-width+2*padding)
-        .tickSizeOuter(0))
-        .selectAll("text")
-        .text(d=>(d/1e6).toLocaleString());
-
-    let rects = d3.selectAll("rect")
-       .data(countryData)
-         .transition()
-         .duration(2000)
-         .delay((d,i)=>50*i)
-         .on("start",(d,i)=>{
-             if(i===0){
-                 d3.select(".title")
-                    .text("Fetching data for "+selectedCountry+"...")
-             }
-         })
-         .on("end",(d,i,nodes)=>{
-             if(i===nodes.length-1){
-                 d3.select(".title")
-                     .text("Yearly GDP data in "+selectedCountry)
-             }
-         });
-         rectangleDims(rects);
+        buildRects(select,usableData);
     });
 
     /*
@@ -161,27 +110,86 @@ d3.queue()
     function selectionData(datasource,selectParam){
         return datasource.filter(d=>d.countryName === selectParam)[0].data;
     }
+    // Function to build rectangles
+    function buildRects(select,usableData){
+        let selectedIndex = select.node().options.selectedIndex,
+        selectedCountry = select.node()[selectedIndex].value,
+        countryData = selectionData(usableData,selectedCountry),
+        gdpMax = d3.max(countryData,d=>+d.gdp_total),
+        barwidth    = (width-2*padding)/countryData.length - barPadding,
+        yScale = d3.scaleLinear().domain([0,gdpMax]).range([height-2*padding,padding]),
+    
+        updateSelect = svg
+                        .selectAll("rect")
+                          .data(countryData);
+        
+        // Create axes
+        createAxes(data0Processed[0],yScale);
+    
+        updateSelect
+            .enter()
+            .append("rect")
+            .attr("x",(d,i)=>(barPadding+barwidth)*i+4*padding/3)
+            .attr("width",barwidth)
+            .attr("y",d=>yScale(d.gdp_total)+padding/2)
+            .attr("height",d=>height-yScale(d.gdp_total)-2*padding)
+            .attr("fill","purple")
+          .merge(updateSelect)
+            .transition()
+            .duration(1000)
+             .delay((d,i)=>20*i)
+             .on("start",(d,i)=>{
+                 if(i===0){
+                     d3.select(".title")
+                        .text("Fetching data for "+selectedCountry+"...")
+                 }
+             })
+             .on("end",(d,i,nodes)=>{
+                 if(i===nodes.length-1){
+                     d3.select(".title")
+                         .text("Yearly GDP data in "+selectedCountry)
+                 }
+             })
+             .attr("x",(d,i)=>(barPadding+barwidth)*i+4*padding/3)
+             .attr("width",barwidth)
+             .attr("y",d=>yScale(d.gdp_total)+padding/2)
+             .attr("height",d=>height-yScale(d.gdp_total)-2*padding)
+             .attr("fill","purple");
+    }
 
     //Function to create x and y axes
     function createAxes(data0,yScale){
         let xScale = d3.scaleLinear().domain(d3.extent(yearsArray(data0))).rangeRound([padding,width-padding]),
-            xAxis  = d3.axisBottom(xScale).ticks().tickSize(-height+3*padding).tickSizeOuter(0),
-            yAxis  = d3.axisLeft(yScale).tickSize(-width+2*padding).tickSizeOuter(0);
-
+            xAxis  = d3.axisBottom(xScale).ticks(),
+            yAxis  = d3.axisLeft(yScale)
+            
+        d3.selectAll(".xAxis").remove();
+        d3.selectAll(".yAxis").remove();          
+    
         svg
             .append("g")
             .classed("xAxis",true)
             .attr("transform",`translate(${padding/3},${height-1.5*padding})`)
             .call(xAxis)
             .selectAll("text")
-            .text(d=>d.toString());
-        svg
-            .append("g")
-            .classed("yAxis",true)
+            .text(d=>d.toString())
+            .attr("font-size","1.1em")
+            .attr("font-weight","bold");
+
+    let vertical = svg
+                    .append("g")
+                    .classed("yAxis",true)
+                    .attr("transform",`translate(${4*padding/3},${padding/2})`);                         
+          vertical
+            .transition()
+            .duration(1500)
             .attr("transform",`translate(${4*padding/3},${padding/2})`)
             .call(yAxis)
             .selectAll("text")
-            .text(d=>(d/1e6).toLocaleString());
+            .text(d=>(d/1e6).toLocaleString())
+            .attr("font-size","1.1em")
+            .attr("font-weight","bold");
+
         svg
             .append("g")
             .classed("yAxisLabel",true)
@@ -192,16 +200,6 @@ d3.queue()
             .attr("text-anchor","middle")
             .attr("font-family","Arial")
             .attr("font-weight","bold");
-    }
-
-    // Function to set attributes of rectangles
-    function rectangleDims(selection){
-        selection
-            .attr("x",(d,i)=>(barPadding+barwidth)*i+4*padding/3)
-            .attr("width",barwidth)
-            .attr("y",d=>yScale(d.gdp_total)+padding/2)
-            .attr("height",d=>height-yScale(d.gdp_total)-2*padding)
-            .attr("fill","purple");
     }
 
     // Function to display country
