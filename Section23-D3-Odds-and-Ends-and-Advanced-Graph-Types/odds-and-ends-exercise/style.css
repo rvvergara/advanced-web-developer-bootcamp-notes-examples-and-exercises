@@ -19,9 +19,9 @@ svg, select,button {
   transition: 0.6s opacity;
 }
 
-.tooltip p{
+/* .tooltip p{
     margin: 2px;
-}
+} */
 
 .tooltip:after {
   content: ' ';
