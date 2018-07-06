@@ -219,6 +219,15 @@ d3.queue()
              .attr("font-size","1.5em")
              .attr("font-family","Arial")
              .attr("font-weight","bold");
+
+        svg.append("g")
+             .attr("transform",`translate(${(width-2*padding)/2-padding},${height-padding/2})`)
+             .append("text")
+             .classed("title",true)
+             .text("Data Courtesy of the World Bank https://data.worldbank.org/ ")
+             .attr("font-size",".7em")
+             .attr("font-family","Arial")
+             .attr("font-weight","bold");
       }
 
     // Functions to show and hide tooltip
