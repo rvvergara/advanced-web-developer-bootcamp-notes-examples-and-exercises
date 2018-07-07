@@ -21,3 +21,14 @@ var nodeSelection = svg
                       .append("circle")
                         .attr("r", d => d.size)
                         .attr("fill", d => d.color);
+
+var simulation    = d3.forceSimulation(nodes);
+
+simulation
+  .force("center",d3.forceCenter(width/2,height/2))
+  .force("nodes",d3.forceManyBody().strength(30))
+  .on("tick",()=>{
+    nodeSelection
+      .attr("cx",d=>d.x)
+      .attr("cy",d=>d.y)
+  })
