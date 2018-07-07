@@ -195,7 +195,7 @@ d3.queue()
             .classed("yAxisLabel",true)
             .attr("transform",`translate(${padding/3},${height/2})`)
             .append("text")
-            .text("GDP ($Million)")
+            .text("GDP ($Million)*")
             .attr("transform",`rotate(-90)`)
             .attr("text-anchor","middle")
             .attr("font-family","Arial")
@@ -219,13 +219,35 @@ d3.queue()
              .attr("font-weight","bold");
 
         svg.append("g")
-             .attr("transform",`translate(${(width-2*padding)/2-padding},${height-padding/2})`)
+             .attr("transform",`translate(${width-3.5*padding},${height-5})`)
              .append("text")
              .classed("title",true)
-             .text("Data Courtesy of the World Bank https://data.worldbank.org/ ")
-             .attr("font-size",".7em")
+             .text("*World Bank Data (1967-2017) https://data.worldbank.org/ ")
+             .attr("font-size",".6em")
              .attr("font-family","Arial")
              .attr("font-weight","bold");
+
+        svg.append("g")
+            .classed("brand",true)
+            .attr("transform",`translate(0,${height-padding/3})`)
+            .append("rect")
+            .classed("resume",true)
+            .attr("x",0)
+            .attr("y",10)
+            .attr("width",430)
+            .attr("height",20)
+            .attr("fill","#e9c377");
+
+        d3.select(".brand")
+            .append("text")
+            .attr("y",25)
+            .attr("x",5)
+            .text("Created using d3.js | RyanV- github.com/rvvergara | twitter.com/CoachRyanV")
+            .attr("font-family","Arial")
+            .attr("font-size","0.7em")
+            .attr("font-weight","bold")
+
+
       }
 
     // Functions to show and hide tooltip
