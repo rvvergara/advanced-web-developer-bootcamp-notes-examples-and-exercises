@@ -25,3 +25,4 @@
 <p><a href="./Section23-D3-Odds-and-Ends-and-Advanced-Graph-Types/">Section 23-Odds and Ends and Advanced Graph Types</a></p>
 <p><a href="./Section24-Project-Building-a-Data-Dashboard-with-D3/">Section 24- Project Building A Data Dashboard with D3</a></p>
 <p><a href="./Section25-Introduction-to-React-and-JSX/">Section25-Introduction to React and JSX</a></p>
+<p><a href="./Section26-Create-React-App-and-Props/">Section26 Create React App and Props</a></p>
