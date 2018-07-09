@@ -11,15 +11,24 @@
   <div id="app"></div>
   <script type="text/babel">
     class RandomBox extends React.Component {
-      render() {
-        <div>
-          Make a box here!
-        </div>
-        );
+      render(){
+        const boxStyles = {
+          backgroundColor: `rgb(${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)})`,
+          fontSize: `${Math.floor(Math.random()*5+1)}em`,
+          padding: "5%",
+          width: "25%",
+          textAlign: "center",
+          color: "#fff",
+          fontFamily: "Courier"
+        }
+        return(
+          <div style={boxStyles}>
+            Random Box
+          </div>
+        )
       }
     }
-
-    ReactDOM.render(<RandomBox />, document.getElementById('app'));
+    ReactDOM.render(<RandomBox/>,document.getElementById("app"));
   </script>
 </body>
 </html>

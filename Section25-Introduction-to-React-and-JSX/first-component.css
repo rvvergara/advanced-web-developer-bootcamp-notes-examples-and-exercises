@@ -17,7 +17,7 @@
   color: #005365;
   display: flex;
   flex-direction: column;
-  justify-conent: center;
+  justify-content: center;
   align-items: center;
 }
 .card img {

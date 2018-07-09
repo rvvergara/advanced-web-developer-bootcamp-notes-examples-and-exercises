@@ -11,17 +11,24 @@
 <body>
   <div id="app"></div>
   <script type="text/babel">
+    class HobbyList extends React.Component {
+      render(){
+        const hobbies = ["Sleeping","Eating","Cuddling"];
+        const style = {fontSize: '1.5em'};
+        return(
+          <ul>
+            {hobbies.map((h,i) => <li key={i} style={style}>{h}</li>)}
+          </ul>
+        );
+      }
+    }
     class Pet extends React.Component {
       render() {
-        const style = {fontSize: '1.5em'};
         return (<div className="card">
                   <h2 className="name">Moxie</h2>
                   <img src="https://github.com/tigarcia/Moxie/raw/master/moxie.png" />
                   <h5 style={{fontSize: '2em', margin: '2px'}}>Hobbies:</h5>
-                  <ul>
-                    <li style={style}>Sleeping</li>
-                    <li style={style}>Eating</li>
-                  </ul>
+                  <HobbyList />
                 </div>);
       }
     }
