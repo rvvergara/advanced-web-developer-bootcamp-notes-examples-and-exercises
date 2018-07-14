@@ -1,0 +1,34 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #0308449d;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+nav h1 {
+    margin: 10px;
+}
+
+nav ul {
+    margin-left: auto;
+    margin-right: 20px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+nav li a:hover {
+    color: #eee;
+    text-decoration: underline;
+}

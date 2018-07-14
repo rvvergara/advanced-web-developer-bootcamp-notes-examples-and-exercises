@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Todo App</title>
+    <script src="https://unpkg.com/react@16.0.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.0.0/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+</head>
+<body>
+  <div id="app"></div>
+  <script type="text/babel">
+
+    function Form({inputText,onChange,onSubmit}){
+        return(
+            <form onSubmit = {onSubmit}>
+                <Input type="text"
+                name = "inputText"
+                autoComplete = "off"
+                value = {inputText}
+                onChange = {onChange} />
+                <input type="submit" value="Save" />
+            </form>
+        )
+    }
+
+    function Input(props){
+        return(
+            <input type={props.type} name={props.name} value={props.value} autoComplete={props.autoComplete} onChange={props.onChange} />
+        )
+    }
+
+    function Todos({data}){
+        const todos = data.map((d,i)=>{
+           return <li key={i}>{d}</li>
+        })
+        return(
+            <ol>
+               {todos}
+            </ol>
+        );
+    }
+
+    class TodoApp extends React.Component {
+        constructor(props){
+            super(props);
+            this.state = {data:[], inputText:""};
+            this.handleSubmit = this.handleSubmit.bind(this);
+            this.handleChange = this.handleChange.bind(this);
+        }
+        handleSubmit(e){
+            e.preventDefault();
+            const data = [...this.state.data,this.state.inputText];
+            this.setState({data,inputText:""});
+        }
+        handleChange(e){
+            this.setState({[e.target.name]:e.target.value});
+        }
+        render(){
+            return(
+                <div>
+                    <h1>Simple Todo App</h1>
+                    <Form onSubmit = {this.handleSubmit} onChange={this.handleChange} inputText={this.state.inputText} />
+                    <Todos data={this.state.data} />
+                </div>
+            );
+            
+        }
+
+    }
+
+    ReactDOM.render(<TodoApp />,document.getElementById("app"))
+  </script>
+</body>
+</html>

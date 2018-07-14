@@ -1,0 +1,16 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #0f0f35;
+    color: #ccc;
+}
+
+button{
+    border: none;
+    background-color: inherit;
+    color: inherit;
+}
+
+button:hover{
+    cursor: pointer;
+}
