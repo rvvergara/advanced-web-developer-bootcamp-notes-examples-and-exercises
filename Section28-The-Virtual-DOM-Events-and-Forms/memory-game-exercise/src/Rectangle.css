@@ -1,8 +1,0 @@
-div.box {
-    width: 10%;
-    height: 130px;
-    margin: 10px;
-    float: left;
-    border-radius: 20px;
-    transition: 0.7s background-color;
-}
