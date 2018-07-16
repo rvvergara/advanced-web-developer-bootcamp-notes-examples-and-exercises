@@ -27,3 +27,5 @@
 <p><a href="./Section25-Introduction-to-React-and-JSX/">Section25-Introduction to React and JSX</a></p>
 <p><a href="./Section26-Create-React-App-and-Props/">Section26 Create React App and Props</a></p>
 <p><a href="./Section27-State/">Section27- State</a></p>
+<p><a href="./Section28-The-Virtual-DOM-Events-and-Forms/">Section28- The Virtual DOM, Events and Forms</a></p>
+<p><a href="./Section29-Component-LifeCycle-Methods/">Section29- Component LifeCycle Methods</a></p>
