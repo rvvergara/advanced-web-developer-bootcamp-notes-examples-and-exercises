@@ -29,3 +29,6 @@
 <p><a href="./Section27-State/">Section27- State</a></p>
 <p><a href="./Section28-The-Virtual-DOM-Events-and-Forms/">Section28- The Virtual DOM, Events and Forms</a></p>
 <p><a href="./Section29-Component-LifeCycle-Methods/">Section29- Component LifeCycle Methods</a></p>
+<p><a href="./Section30-Building-A-FullStack-App-With-React/">Section30- Building A Full Stack App With React</a></p>
+<p><a href="./Section31-React-Router/">Section31- React Router</a></p>
+<p><a href="./Section32-Redux-Introduction/">Redux Introduction</a></p>
