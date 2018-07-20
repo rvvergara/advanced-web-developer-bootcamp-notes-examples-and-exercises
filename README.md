@@ -32,3 +32,4 @@
 <p><a href="./Section30-Building-A-FullStack-App-With-React/">Section30- Building A Full Stack App With React</a></p>
 <p><a href="./Section31-React-Router/">Section31- React Router</a></p>
 <p><a href="./Section32-Redux-Introduction/">Redux Introduction</a></p>
+<p><a href="./Section33-In-Depth-Redux-Code-Walkthrough/">Section33-In Depth Redux Walkthrough</a></p>
