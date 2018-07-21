@@ -1,28 +1,24 @@
-import {ADD_TODO, REMOVE_TODO,EDIT_TODO} from "./actionCreators"; 
+import {ADD_TODO, REMOVE_TODO,EDIT_TODO,GET_TODOS} from "./actionCreators"; 
 
 const initialState = {
     todos: [],
-    id: 0
 };
 
 const rootReducer = (state=initialState,action) => {
     switch(action.type){
+        case GET_TODOS: {
+            return {...state, todos: action.data}
+        }
         case ADD_TODO: {
-            let newState = {...state};
-            newState.id++;
-            let todo = {
-                task: action.task,
-                id: newState.id
-            }
-            return {...newState,todos:[...state.todos,todo]};
+            return {...state,todos:[...state.todos,action.task]};
         }
         case REMOVE_TODO: {
-            let todos = [...state.todos].filter(todo => +todo.id !== +action.id);
+            let todos = [...state.todos].filter(todo => todo._id !== action.id);
             return ({...state,todos});
         }
         case EDIT_TODO: {
             let todos = [...state.todos].map(todo =>{
-                if(+todo.id === +action.id){
+                if(todo._id === action.id){
                     todo.task = action.task
                 }
                 return todo;

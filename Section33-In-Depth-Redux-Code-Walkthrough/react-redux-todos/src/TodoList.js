@@ -2,7 +2,8 @@ import React, {Component} from "react";
 import Todo from "./Todo";
 import Form from "./Form";
 import { connect } from "react-redux";
-import { addTodo, removeTodo, editTodo } from "./actionCreators";
+import { addTodo, removeTodo, editTodo,getTodos } from "./actionCreators";
+import { Route } from "react-router-dom";
 
 const mapStateToProps = state => (
     {
@@ -15,30 +16,17 @@ const mapDispatchToProps = dispatch => (
         addTodo: task => dispatch(addTodo(task)),
         removeTodo: id => dispatch(removeTodo(id)),
         editTodo: (id,task) => dispatch(editTodo(id,task)),
+        getTodos: () => dispatch(getTodos()),
     }
 )
 
 class TodoList extends Component {
     constructor(props){
         super(props);
-        this.state = {
-            task: "",
-        }
-        this.handleSubmit = this.handleSubmit.bind(this);
-        this.handleChange = this.handleChange.bind(this);
+        this.handleAdd = this.handleAdd.bind(this);
     }
-    handleSubmit(e){
-        e.preventDefault();
-        this.props.addTodo(this.state.task);
-        this.setState({task:""});
-    }
-    handleChange(e){
-        
-        this.setState(
-            {
-                [e.target.name]:e.target.value
-            }
-        );
+    componentDidMount(){
+        this.props.getTodos();
     }
     handleRemove(e){
         this.props.removeTodo(e.target.id);
@@ -54,27 +42,26 @@ class TodoList extends Component {
             this.props.editTodo(toEditId,newTodo);            
         }
     }
+    handleAdd(val){
+        this.props.addTodo(val);
+    }
     render(){
         let todos = this.props.todos.map(todo=>(
                     <Todo 
-                    key={todo.id} 
+                    key={todo._id} 
                     task={todo.task} 
-                    id = {todo.id}
+                    id = {todo._id}
                     onRemove = {this.handleRemove.bind(this)}
                     onEdit = {this.handleEdit.bind(this)}
                     />
                 ));
         return(
-            <div>
-                <Form 
-                    task = {this.state.task}
-                    handleChange = {this.handleChange}
-                    handleSubmit = {this.handleSubmit}
-                />
-                <ul>
-                    {todos}
-                </ul>
-            </div>
+                <div>
+                    <Route exact path="/todos" component = {()=><div><ul>{todos}</ul></div>} />
+                    <Route path="/todos/new" component = {props=>(
+                        <Form {...props} handleAdd={this.handleAdd} />
+                    )} />
+                </div>
         );
     }
 }
