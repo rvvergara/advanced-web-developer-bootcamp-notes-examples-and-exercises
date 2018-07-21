@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import Todo from "./Todo";
+import Form from "./Form";
 import { connect } from "react-redux";
 import { addTodo, removeTodo } from "./actionCreators";
 
@@ -52,18 +53,11 @@ class TodoList extends Component {
                 ));
         return(
             <div>
-                <form action="" onSubmit={this.handleSubmit}>
-                    <label htmlFor="task">Task: </label>
-                    <input 
-                    type="text" 
-                    name="task" 
-                    id="task" 
-                    autoComplete="off"
-                    onChange = {this.handleChange}
-                    value = {this.state.task}
-                    />
-                    <button>Add New Todo!</button>
-                </form>
+                <Form 
+                    task = {this.state.task}
+                    handleChange = {this.handleChange}
+                    handleSubmit = {this.handleSubmit}
+                />
                 <ul>
                     {todos}
                 </ul>
