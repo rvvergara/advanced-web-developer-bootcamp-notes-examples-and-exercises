@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import Todo from "./Todo";
 import Form from "./Form";
 import { connect } from "react-redux";
-import { addTodo, removeTodo } from "./actionCreators";
+import { addTodo, removeTodo, editTodo } from "./actionCreators";
 
 const mapStateToProps = state => (
     {
@@ -13,7 +13,8 @@ const mapStateToProps = state => (
 const mapDispatchToProps = dispatch => (
     {
         addTodo: task => dispatch(addTodo(task)),
-        removeTodo: id => dispatch(removeTodo(id))
+        removeTodo: id => dispatch(removeTodo(id)),
+        editTodo: (id,task) => dispatch(editTodo(id,task)),
     }
 )
 
@@ -28,7 +29,7 @@ class TodoList extends Component {
     }
     handleSubmit(e){
         e.preventDefault();
-        this.props.dispatch(addTodo(this.state.task));
+        this.props.addTodo(this.state.task);
         this.setState({task:""});
     }
     handleChange(e){
@@ -40,7 +41,18 @@ class TodoList extends Component {
         );
     }
     handleRemove(e){
-        this.props.dispatch(removeTodo(e.target.id));
+        this.props.removeTodo(e.target.id);
+    }
+    handleEdit(e){
+        e.stopPropagation();
+        if(e.target.querySelector("button")){
+            let regex = /X/g;
+            let button = e.target.querySelector("button");
+            let todoToEdit = e.target.innerText.replace(regex,"");
+            let toEditId = button.id; 
+            let newTodo = prompt("Updated todo: ",todoToEdit);
+            this.props.editTodo(toEditId,newTodo);            
+        }
     }
     render(){
         let todos = this.props.todos.map(todo=>(
@@ -49,6 +61,7 @@ class TodoList extends Component {
                     task={todo.task} 
                     id = {todo.id}
                     onRemove = {this.handleRemove.bind(this)}
+                    onEdit = {this.handleEdit.bind(this)}
                     />
                 ));
         return(
@@ -66,4 +79,4 @@ class TodoList extends Component {
     }
 }
 
-export default connect(mapStateToProps)(TodoList);
+export default connect(mapStateToProps,mapDispatchToProps)(TodoList);
