@@ -22,4 +22,10 @@ router.delete("/:id",(req,res,next)=>{
     .catch(err => next(err));
 });
 
+router.put("/:id",(req,res,next)=>{
+    Todo.findByIdAndUpdate(req.params.id,req.body)
+    .then(updatedTodo => res.send(updatedTodo))
+    .catch(err => next(err));
+});
+
 module.exports = router;
