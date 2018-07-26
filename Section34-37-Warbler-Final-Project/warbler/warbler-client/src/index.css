@@ -56,3 +56,15 @@ ul.navbar-nav li {
   color: #fff;
   text-shadow: 0 0 8px #66757f;
 }
+
+/* Message list */
+
+#messages .list-group-item {
+  display:flex;
+  align-items: flex-start;
+  padding: 7px 20px 12px;
+}
+
+#messages:not(.no-hover) .list-group-item:hover{
+  background-color: #e6ecf0;
+}

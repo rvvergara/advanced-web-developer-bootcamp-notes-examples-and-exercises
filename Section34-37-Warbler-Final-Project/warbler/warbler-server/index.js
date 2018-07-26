@@ -22,7 +22,7 @@ messagesroutes);
 
 app.get("/api/messages",loginRequired,async function(req,res,next){
     try{
-        let messages = db.Message.find().sort({createdAt: "desc"}).populate("user",{
+        let messages = await db.Message.find().sort({createdAt: "desc"}).populate("user",{
             username: true,
             profileImageUrl: true
         });
